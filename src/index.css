@@ -10,5 +10,5 @@ body,
 .app {
   height: 100%;
   background-color: #010026;
-  /* @apply text-white; */
+  @apply text-white;
 }
