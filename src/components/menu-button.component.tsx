@@ -13,7 +13,7 @@ const MenuButton = ({
 }: MenuButtonProps) => {
   return (
     <button
-      className="rounded-full bg-red p-2"
+      className="rounded-full bg-green p-2"
       onClick={() =>
         setIsMenuToggled(!isMenuToggled)
       }
