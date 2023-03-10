@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import NavBar from "./scenes/navbar.scenes";
+import DotGroup from "./scenes/dot-group.scenes";
+import Landing from "./scenes/landing.scenes";
+import CursorTrailer from "./components/cursor-trailer.component";
 
 export type IsTopOfPage = boolean;
 export type SelectedPage = string;
@@ -21,6 +24,7 @@ function App() {
     const handleScroll = () => {
       if (window.scrollY === 0)
         setIsTopOfPage(true);
+
       if (window.scrollY !== 0)
         setIsTopOfPage(false);
     };
@@ -39,11 +43,23 @@ function App() {
 
   return (
     <div className="app bg-deep-blue">
+      <CursorTrailer />
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <div className="w-5/6 mx-auto md:h-full">
+        {isAboveMediumScreens && (
+          <DotGroup
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        )}
+        <Landing
+          setSelectedPage={setSelectedPage}
+        />
+      </div>
     </div>
   );
 }
