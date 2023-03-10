@@ -23,7 +23,7 @@ const NavBar = ({
 }: NavBarProps) => {
   const navBarBackground = isTopOfPage
     ? ""
-    : "bg-red";
+    : "bg-green";
   const [isMenuToggled, setIsMenuToggled] =
     useState(false);
   const isAboveSmallScreens = useMediaQuery(
