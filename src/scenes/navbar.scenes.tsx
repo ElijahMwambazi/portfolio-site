@@ -71,7 +71,7 @@ const NavBar = ({
 
               {/* MOBILE NAVBAR LINKS */}
               <NavBarLinks
-                className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
+                className="flex flex-col gap-10 ml-[33%] text-2xl"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
