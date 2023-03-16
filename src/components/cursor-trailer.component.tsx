@@ -27,20 +27,21 @@ const CursorTrailer = () => {
 
   const circleStyle = useMemo(
     () => ({
+      display: "none",
       transition: "all 0.1s ease-out",
       transform: "scale(1)",
-      display: "none",
+      zIndex: "999",
     }),
     []
   );
 
+  // TODO: Place circle next to logo at - first render & when mouse isn't within window
   const animateCircles = useCallback(() => {
     let x = coordinates.x;
     let y = coordinates.y;
 
     circles.forEach((circle, index) => {
       if (circle) {
-        circle.style.display = "block";
         circle.style.left = `${x - 8}px`;
         circle.style.top = `${y - 8}px`;
 
@@ -62,17 +63,38 @@ const CursorTrailer = () => {
         x: e.clientX,
         y: e.clientY,
       });
+
+      circles.forEach((circle) => {
+        if (circle)
+          circle.style.display = "block";
+      });
+    };
+
+    const handleMouseLeave = () => {
+      circles.forEach((circle) => {
+        if (circle) circle.style.display = "none";
+      });
     };
 
     const debouncedUpdateCoordinates = debounce(
       handleMouseMove,
-      2 // Update every 16ms (60fps)
+      2
     );
 
     window.addEventListener(
       "mousemove",
       debouncedUpdateCoordinates
     );
+
+    window.addEventListener(
+      "mouseleave",
+      handleMouseLeave
+    );
+
+    // window.removeEventListener(
+    //   "mouseleave",
+    //   handleMouseLeave
+    // );
 
     return () => {
       window.removeEventListener(
@@ -89,7 +111,7 @@ const CursorTrailer = () => {
       {[...Array(20)].map((_, index) => (
         <div
           key={index}
-          className="h-5 w-5 rounded-full bg-yellow opacity-2 fixed pointer-events-none z-999"
+          className="h-5 w-5 rounded-full bg-yellow fixed pointer-events-none"
           style={{
             ...circleStyle,
             transform: `scale(${
