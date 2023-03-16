@@ -3,6 +3,7 @@ import {
   SelectedPage,
   SetSelectedPage,
 } from "../App";
+import RandomizedText from "./randomized-text.componenets";
 
 export type LinkProps = {
   page: string;
@@ -31,7 +32,7 @@ const Link = ({
         setSelectedPage(lowerCasePage)
       }
     >
-      {page}
+      {<RandomizedText headingText={page} />}
     </Anchorlink>
   );
 };
