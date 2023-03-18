@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +13,173 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: #010026;
+  background-color: #081519;
+  overflow: hidde;
   @apply text-white;
+}
+
+::selection {
+  color: #010026;
+  background: #fdcc49;
+}
+
+/* ******************* */
+/* WELCOME */
+/* ******************* */
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform: scale(0.15);
+    box-shadow: 0 0 2px rgba(black, 0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+    box-shadow: 0 0 10px rgba(black, 0.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.15);
+    box-shadow: 0 0 2px rgba(black, 0.1);
+  }
+}
+
+.animate-loading {
+  animation: loading 1.3s 0.65s infinite;
+  background: #081519;
+}
+
+.animate-loading-2 {
+  animation: loading 1.3s infinite;
+  background: #fdcc49;
+}
+
+/* ******************* */
+/* PARTICLES */
+/* ******************* */
+@keyframes particleFall1 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    transform: translate(50vw, 150vh);
+  }
+}
+
+@keyframes particleFall2 {
+  0% {
+    transform: translate(-10vw, -10vh);
+  }
+  100% {
+    transform: translate(60vw, 150vh);
+  }
+}
+
+@keyframes particleFall3 {
+  0% {
+    transform: translate(10vw, 0vh);
+  }
+  100% {
+    transform: translate(40vw, 150vh);
+  }
+}
+
+@keyframes particleFall4 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    transform: translate(40vw, 150vh);
+  }
+}
+
+.particle {
+  background-color: #fdcc49;
+}
+
+.particleAnimation1 {
+  animation: particleFall1 linear infinite;
+}
+
+.particleAnimation2 {
+  animation: particleFall2 linear infinite;
+}
+
+.particleAnimation3 {
+  animation: particleFall3 linear infinite;
+}
+
+.particleAnimation4 {
+  animation: particleFall4 linear infinite;
+}
+
+/* ******************* */
+/* BUTTON */
+/* ******************* */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 2s linear infinite;
+}
+
+.animate-slide-left {
+  animation: slideLeft 2s linear infinite;
+}
+
+.animate-slide-down {
+  animation: slideDown 2s linear infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 2s linear infinite;
+}
+
+.animation-delay-1s {
+  animation-delay: 1s;
+}
+
+/* ******************* */
+/* BORDER */
+/* ******************* */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
