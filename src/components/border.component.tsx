@@ -1,7 +1,15 @@
-const Border = ({ width = "w-full" }) => {
+export type BorderProps = {
+  className?: string;
+  width: string;
+};
+
+const Border = ({
+  className,
+  width = "w-full",
+}: BorderProps) => {
   return (
     <div
-      className={`${width} h-2 bg-yellow`}
+      className={`${width} ${className}`}
     ></div>
   );
 };
