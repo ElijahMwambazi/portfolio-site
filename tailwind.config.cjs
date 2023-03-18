@@ -6,23 +6,28 @@ module.exports = {
     extend: {
       colors: {
         blue: "#2CBCE9",
-        green: "#0E8388",
+        green: "#081519",
         yellow: "#FDCC49",
         gray: "#EDEDED",
-        black: "#0E0E10",
+        github: "#171515",
+        linkedin: "#0e76a8",
+
         "dark-gray": "#757575",
         "deep-blue": "#010026",
         "opaque-black": "rgba(0,0,0,0.35)"
       },
       backgroundImage: (theme) => ({
-        "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
-        "gradient-rainblue": "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73s%)"
+        // "gradient-left": "linear-gradient(to right, #081519, #FDCC49)",
+        "gyg": "linear-gradient(90deg, rgba(8,21,25,1) 20%, rgba(253,204,73,1) 50%, rgba(8,21,25,1) 80%)",
+        wallpaper: "url('./src/assets/background.png)"
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"]
+        opensans: ["Open Sans", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        bungee: ["Bungee", "cursive"]
       },
-      constent: {
+      content: {
         brush: "url('./assets/brush.png')",
         person1: "url('./assets/person-1.png')",
         person2: "url('./assets/person-2.png')",
