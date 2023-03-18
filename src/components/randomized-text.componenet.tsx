@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export type RandomizedTextProps = {
-  styles?: string;
+  className?: string;
   singleWord: boolean;
-  headingText: string;
+  textToRandomize: string;
+  style?: {};
 };
 
 const RandomizedText = ({
-  styles,
+  className,
+  style,
   singleWord,
-  headingText,
+  textToRandomize,
 }: RandomizedTextProps) => {
   const letters = "abcdefghijklmnopqrstuvwxyz";
 
-  const [text, setText] = useState(headingText);
+  const [text, setText] = useState(
+    textToRandomize
+  );
 
   useEffect(() => {
     const randomize = () => {
       let iteration = 0;
 
       const interval = setInterval(() => {
-        const words = headingText.split(" ");
+        const words = textToRandomize.split(" ");
         setText(() => {
           const randomizedWords = words.map(
             (word) => {
@@ -68,7 +73,11 @@ const RandomizedText = ({
     }, 1500);
   }, []);
 
-  return <p className={styles}>{text}</p>;
+  return (
+    <p className={className} style={style}>
+      {text}
+    </p>
+  );
 };
 
 export default RandomizedText;
