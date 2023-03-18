@@ -14,7 +14,6 @@ body,
 .app {
   height: 100%;
   background-color: #081519;
-  overflow: hidde;
   @apply text-white;
 }
 
@@ -59,42 +58,38 @@ body,
 /* ******************* */
 @keyframes particleFall1 {
   0% {
-    transform: translate(0vw, 0vh);
+    transform: translate(0%, 0%);
   }
   100% {
-    transform: translate(50vw, 150vh);
+    transform: translate(50%, 150%);
   }
 }
 
 @keyframes particleFall2 {
   0% {
-    transform: translate(-10vw, -10vh);
+    transform: translate(-10%, -10%);
   }
   100% {
-    transform: translate(60vw, 150vh);
+    transform: translate(60%, 150%);
   }
 }
 
 @keyframes particleFall3 {
   0% {
-    transform: translate(10vw, 0vh);
+    transform: translate(10%, 0%);
   }
   100% {
-    transform: translate(40vw, 150vh);
+    transform: translate(40%, 150%);
   }
 }
 
 @keyframes particleFall4 {
   0% {
-    transform: translate(0vw, 0vh);
+    transform: translate(0%, 0%);
   }
   100% {
-    transform: translate(40vw, 150vh);
+    transform: translate(40%, 150%);
   }
-}
-
-.particle {
-  background-color: #fdcc49;
 }
 
 .particleAnimation1 {
@@ -170,4 +165,16 @@ body,
 
 .animation-delay-1s {
   animation-delay: 1s;
+}
+
+/* ******************* */
+/* BORDER */
+/* ******************* */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
