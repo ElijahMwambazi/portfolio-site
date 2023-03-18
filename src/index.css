@@ -171,15 +171,3 @@ body,
 .animation-delay-1s {
   animation-delay: 1s;
 }
-
-/* ******************* */
-/* BORDER */
-/* ******************* */
-@keyframes moveText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
