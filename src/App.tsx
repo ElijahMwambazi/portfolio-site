@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
+import {
+  Fragment,
+  useEffect,
+  useState,
+} from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
-import NavBar from "./scenes/navbar.scenes";
-import DotGroup from "./scenes/dot-group.scenes";
-import Landing from "./scenes/landing.scenes";
+import NavBar from "./scenes/navbar.scene";
+import DotGroup from "./scenes/dot-group.scene";
+import Landing from "./scenes/landing.scene";
 import CursorTrailer from "./components/cursor-trailer.component";
+import WelcomeScreen from "./scenes/welcome-screen.scene";
+import LineGradient from "./components/border.component";
+import Skills from "./scenes/skills.scene";
 
 export type IsTopOfPage = boolean;
 export type SelectedPage = string;
@@ -12,6 +19,8 @@ export type SetSelectedPage = (
 ) => void;
 
 function App() {
+  const [showContent, setShowContent] =
+    useState(false);
   const [isTopOfPage, setIsTopOfPage] =
     useState(true);
   const [selectedPage, setSelectedPage] =
@@ -19,6 +28,13 @@ function App() {
   const isAboveMediumScreens = useMediaQuery(
     "(min-width: 1060px)"
   );
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowContent(true);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,23 +58,37 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
-      <CursorTrailer />
-      <NavBar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediumScreens && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+    <div className="app">
+      <div className="relative selection:bg-yellow selection:text-black">
+        {showContent ? (
+          <Fragment>
+            <CursorTrailer />
+            <NavBar
+              isTopOfPage={isTopOfPage}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <div className="w-5/6 mx-auto md:h-full">
+              {isAboveMediumScreens && (
+                <DotGroup
+                  selectedPage={selectedPage}
+                  setSelectedPage={
+                    setSelectedPage
+                  }
+                />
+              )}
+              <Landing
+                setSelectedPage={setSelectedPage}
+              />
+            </div>
+            <LineGradient />
+            <div className="w-5/6 mx-auto md:h-full">
+              <Skills />
+            </div>
+          </Fragment>
+        ) : (
+          <WelcomeScreen />
         )}
-        <Landing
-          setSelectedPage={setSelectedPage}
-        />
       </div>
     </div>
   );
