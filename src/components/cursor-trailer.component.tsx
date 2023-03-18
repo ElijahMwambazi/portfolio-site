@@ -70,11 +70,11 @@ const CursorTrailer = () => {
       });
     };
 
-    const handleMouseLeave = () => {
-      circles.forEach((circle) => {
-        if (circle) circle.style.display = "none";
-      });
-    };
+    // const handleMouseLeave = () => {
+    //   circles.forEach((circle) => {
+    //     if (circle) circle.style.top = "0";
+    //   });
+    // };
 
     const debouncedUpdateCoordinates = debounce(
       handleMouseMove,
@@ -86,10 +86,10 @@ const CursorTrailer = () => {
       debouncedUpdateCoordinates
     );
 
-    window.addEventListener(
-      "mouseleave",
-      handleMouseLeave
-    );
+    // window.addEventListener(
+    //   "mouseleave",
+    //   handleMouseLeave
+    // );
 
     // window.removeEventListener(
     //   "mouseleave",
