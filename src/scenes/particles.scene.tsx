@@ -1,10 +1,12 @@
+import { useEffect } from "react";
+
 const randomNumber = (limit: number) => {
   return Math.floor(Math.random() * limit);
 };
 
 const Particles = () => {
   return (
-    <div className="bg-gray-100 bg-opacity-60 z-10 h-5 w-full mt-20">
+    <div className="relative bg-gray-100 bg-opacity-60 z-10 h-5 w-full mt-20">
       {[...Array(200)].map((_, index) => {
         const particleClasses: string[] = [];
         const particleOpacity =
