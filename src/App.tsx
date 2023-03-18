@@ -9,8 +9,8 @@ import DotGroup from "./scenes/dot-group.scene";
 import Landing from "./scenes/landing.scene";
 import CursorTrailer from "./components/cursor-trailer.component";
 import WelcomeScreen from "./scenes/welcome-screen.scene";
-import LineGradient from "./components/border.component";
 import Skills from "./scenes/skills.scene";
+import Particles from "./scenes/particles.scene";
 
 export type IsTopOfPage = boolean;
 export type SelectedPage = string;
@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="relative selection:bg-yellow selection:text-black">
+      <div className="relative selection:bg-yellow selection:text-black overflow-hidden">
         {showContent ? (
           <Fragment>
             <CursorTrailer />
@@ -81,7 +81,7 @@ function App() {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <LineGradient />
+            <Particles />
             <div className="w-5/6 mx-auto md:h-full">
               <Skills />
             </div>
