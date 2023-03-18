@@ -37,6 +37,8 @@ const Button = ({
     <a
       href={href}
       className={`py-3 px-7 bg-dark-gray font-semibold hover:bg-yellow hover:text-black transition duration-500 shadow-lg shadow-black ${styles}`}
+      target="_blank"
+      rel="noreferrer"
     >
       <RandomizedText
         textToRandomize={text}
