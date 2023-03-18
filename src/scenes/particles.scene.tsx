@@ -1,20 +1,12 @@
-import { useEffect, useRef } from "react";
-import ReactDOM from "react-dom";
-
 const randomNumber = (limit: number) => {
   return Math.floor(Math.random() * limit);
 };
 
 const Particles = () => {
-  const bgRef = useRef<HTMLDivElement | null>(
-    null
-  );
-
-  useEffect(() => {
-    const bg = bgRef.current;
-
-    if (bg) {
-      for (let i = 0; i < 300; i++) {
+  return (
+    <div className="bg-gray-100 bg-opacity-60 z-10 h-5 w-full mt-20">
+      {[...Array(200)].map((_, index) => {
+        const particleClasses: string[] = [];
         const particleOpacity =
           randomNumber(10) * 0.1;
         const heightWidth = randomNumber(11) + 5;
@@ -27,21 +19,15 @@ const Particles = () => {
           Math.random() +
           0.2;
 
-        const particleClasses = ["particle"];
-
-        if (i % 4 === 0) {
+        if (index % 4 === 0) {
           particleClasses.push(
             "particleAnimation1"
           );
-        }
-
-        if (i % 4 === 1) {
+        } else if (index % 4 === 1) {
           particleClasses.push(
             "particleAnimation2"
           );
-        }
-
-        if (i % 4 === 2) {
+        } else if (index % 4 === 2) {
           particleClasses.push(
             "particleAnimation3"
           );
@@ -51,36 +37,24 @@ const Particles = () => {
           );
         }
 
-        const particle = (
-          <span
-            key={i}
-            className={particleClasses.join(" ")}
+        return (
+          <div
+            key={index}
+            className={`${particleClasses.join(
+              " "
+            )} absolute bg-yellow rounded-full pointer-events-none z-20`}
             style={{
-              backgroundColor: "#FDCC49",
               width: `${heightWidth}px`,
               height: `${heightWidth}px`,
               left: `${startLocation}%`,
+              opacity: `${particleOpacity}`,
               animationDelay: `${timeDelay}s`,
               animationDuration: `${animDuration}s`,
-              opacity: `${particleOpacity}`,
-              pointerEvents: "none",
-              position: "absolute",
             }}
           />
         );
-
-        ReactDOM.createPortal(particle, bg);
-      }
-    }
-  }, []);
-
-  return (
-    <>
-      <div
-        className="absolute bg-gray-100 bg-opacity-60 top-0 left-0 z-50 h-full w-full pointer-events-none"
-        ref={bgRef}
-      ></div>
-    </>
+      })}
+    </div>
   );
 };
 
