@@ -17,6 +17,8 @@ body,
   @apply text-white;
 }
 
+/* TODO: Change scroll-bar styles */
+
 ::selection {
   color: #010026;
   background: #fdcc49;
