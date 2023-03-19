@@ -20,7 +20,7 @@ const Landing = ({
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center"
+      className="md:flex md:justify-between md:items-center py-10"
     >
       {/* IMAGE */}
       <motion.div
@@ -57,7 +57,7 @@ const Landing = ({
           }}
         >
           <RandomizedText
-            className="font-bungee text-6xl capitalize z-10  md:text-start"
+            className="font-bungee text-6xl capitalize z-10 md:text-start"
             textToRandomize="Elijah"
             singleWord={true}
           />
@@ -67,8 +67,7 @@ const Landing = ({
             singleWord={true}
           />
           <RandomizedText
-            className="font-playfair mt-10 text-3
-            text-justify leading-7 md:text-start"
+            className="font-playfair mt-10 text-justify leading-7 md:text-start"
             textToRandomize="Software engineer who enjoys connecting
             the dots: be it ideas from different
             disciplines, people from different teams, or
@@ -87,7 +86,7 @@ const Landing = ({
 
         {/* CALL TO ACTION */}
         <motion.div
-          className="flex justify-center md:justify-start mt-12"
+          className="flex justify-center md:justify-start mt-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
