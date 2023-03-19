@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
-import Particles from "./particles.scene";
-import Line from "../components/line.component";
+import Heading from "../components/heading.component";
 
 const Skills = () => {
   const isAboveMediumScreens = useMediaQuery(
@@ -10,11 +9,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative pt-12 pb-24"
+      className="relative mt-24 pb-24"
     >
-      <Particles />
       {/* HEADER AND IMAGE */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="flex md:flex md:justify-between md:gap-16">
         <motion.div
           className="md:w1/3"
           initial="hidden"
@@ -26,14 +24,23 @@ const Skills = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="font-montserrat capitalize font-semibold text-2xl mb-5">
-            My{" "}
-            <span className="text-yellow">
-              Skills
-            </span>
-          </p>
-          <Line />
+          <Heading
+            firstPartOfText={"Sk"}
+            secondPartOfText={"ills"}
+          />
+          <p
+            className="font-playfair mt-10 mb-7 text-3
+            text-justify leading-7 md:text-start"
+          ></p>
         </motion.div>
+
+        <div className="mt-16 md:mt-0">
+          {isAboveMediumScreens ? (
+            <div></div>
+          ) : (
+            <div></div>
+          )}
+        </div>
       </div>
     </section>
   );
