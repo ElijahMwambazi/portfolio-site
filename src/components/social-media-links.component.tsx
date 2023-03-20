@@ -1,8 +1,8 @@
-import { ReactComponent as GitHubIcon } from "../assets/github.svg";
-import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
-import { ReactComponent as TwitterIcon } from "../assets/twitter.svg";
-import { ReactComponent as TwitchIcon } from "../assets/twitch.svg";
-import { ReactComponent as SpotifyIcon } from "../assets/spotify.svg";
+import { ReactComponent as GitHubIcon } from "../assets/socials/github.svg";
+import { ReactComponent as LinkedInIcon } from "../assets/socials/linkedin.svg";
+import { ReactComponent as TwitterIcon } from "../assets/socials/twitter.svg";
+import { ReactComponent as TwitchIcon } from "../assets/socials/twitch.svg";
+import { ReactComponent as SpotifyIcon } from "../assets/socials/spotify.svg";
 
 const SocialMediaLinks = () => {
   const styles =
@@ -12,7 +12,7 @@ const SocialMediaLinks = () => {
     <div className="flex justify-center md:justify-start gap-10">
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://github.com/ElijahMwambaz"
+        href="https://github.com/ElijahMwambazi"
         target="_blank"
         rel="noreferrer"
       >
@@ -28,7 +28,7 @@ const SocialMediaLinks = () => {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href=""
+        href="https://twitter.com/ElijahMwambazi2"
         target="_blank"
         rel="noreferrer"
       >
