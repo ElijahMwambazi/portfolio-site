@@ -20,7 +20,7 @@ const Landing = ({
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center py-10"
+      className="md:flex md:justify-between md:items-center py-10 sm:py-0"
     >
       {/* IMAGE */}
       <motion.div
@@ -79,7 +79,7 @@ const Landing = ({
             and algorithms, communicating complex
             ideas to non-technical stakeholders. I am
             able to jump across vertices to deliver
-            high-performing business solutions."
+            high-performing technical business solutions."
             singleWord={false}
           />
         </motion.div>
