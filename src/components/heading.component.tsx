@@ -18,10 +18,7 @@ const Heading = ({
         </span>
       </p>
       {
-        <Border
-          width={""}
-          className="-mt-1 h-2 bg-white rounded"
-        />
+        <Border className="-mt-1 h-2 bg-white rounded" />
       }
     </div>
   );
