@@ -1,17 +1,9 @@
 export type BorderProps = {
   className?: string;
-  width: string;
 };
 
-const Border = ({
-  className,
-  width = "w-full",
-}: BorderProps) => {
-  return (
-    <div
-      className={`${width} ${className}`}
-    ></div>
-  );
+const Border = ({ className }: BorderProps) => {
+  return <div className={`${className}`}></div>;
 };
 
 export default Border;
