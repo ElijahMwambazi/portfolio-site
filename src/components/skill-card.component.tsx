@@ -14,9 +14,9 @@ const SkillCard = ({
 }: SkillCardProps) => {
   return (
     <div className="flex flex-col gap-2 p-2 justify-center rounded border-yellow border-2 text-bold">
-      {skillIcon}
+      {title}
       <ProgressBar
-        title={title}
+        skillIcon={skillIcon}
         percentage={percentage}
       />
     </div>

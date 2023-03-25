@@ -1,12 +1,16 @@
-import { useEffect, useRef } from "react";
+import {
+  ReactElement,
+  useEffect,
+  useRef,
+} from "react";
 
 export type ProgressBarProps = {
-  title: string;
+  skillIcon: ReactElement;
   percentage: number;
 };
 
 const ProgressBar = ({
-  title,
+  skillIcon,
   percentage,
 }: ProgressBarProps) => {
   const countbarRef =
@@ -37,10 +41,7 @@ const ProgressBar = ({
 
   return (
     <div className="flex gap-4">
-      <h3 className="font-playfair align-middle shrink">
-        {title}
-      </h3>
-
+      {skillIcon}
       <div className="rounded-full grow border-yellow border-2 p-2">
         <div
           className="font-montserrat text-sm bg-yellow flex justify-end rounded-full px-2 text-dark-green font-bold"
