@@ -191,3 +191,80 @@ body,
     transform: translateX(-100%);
   }
 }
+
+/* ****************** */
+/* SHOTTING STARS */
+/* ****************** */
+@keyframes animate-bg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+.animation-delay-8000 {
+  animation-delay: 8s;
+}
+
+.animation-delay-10000 {
+  animation-delay: 10s;
+}
+
+.animation-delay-12000 {
+  animation-delay: 12s;
+}
+
+.animation-delay-14000 {
+  animation-delay: 14s;
+}
+
+.animation-delay-7500 {
+  animation-delay: 7.5s;
+}
+
+.animation-delay-27500 {
+  animation-delay: 27.5s;
+}
