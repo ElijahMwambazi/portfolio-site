@@ -45,7 +45,7 @@ const ProgressBar = ({
       <div className="rounded-full grow border-yellow border-2 p-2">
         <div
           className="font-montserrat text-sm bg-yellow flex justify-end rounded-full px-2 text-dark-green font-bold"
-          data-percentNumber={percentage}
+          data-percentnumber={percentage}
           ref={countbarRef}
         />
       </div>
