@@ -10,7 +10,7 @@ const Heading = ({
   secondPartOfText,
 }: HeadingProps) => {
   return (
-    <div className="">
+    <div className="mb-7">
       <p className="font-bungee font-semibold text-2xl">
         {firstPartOfText}
         <span className="text-dark-gray">
