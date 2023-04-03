@@ -29,8 +29,6 @@ const RandomizedText = ({
     triggerOnce: true,
   });
 
-  console.log(inView);
-
   useEffect(() => {
     if (inView) {
       const randomize = () => {
