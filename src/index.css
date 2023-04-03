@@ -268,3 +268,28 @@ body,
 .animation-delay-27500 {
   animation-delay: 27.5s;
 }
+
+/* ****************** */
+/* Skills Cards Animation */
+/* ****************** */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes goUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+}
