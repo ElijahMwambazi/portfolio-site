@@ -3,6 +3,7 @@ import {
   useEffect,
   useRef,
 } from "react";
+import { useInView } from "react-intersection-observer";
 
 export type ProgressBarProps = {
   skillIcon: ReactElement;
@@ -16,31 +17,38 @@ const ProgressBar = ({
   const countbarRef =
     useRef<HTMLDivElement>(null);
 
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   useEffect(() => {
-    let startCount = 0;
+    if (inView) {
+      let startCount = 0;
 
-    const progressBar = () => {
-      startCount++;
+      const progressBar = () => {
+        startCount++;
 
-      if (countbarRef.current) {
-        countbarRef.current.innerHTML = `<h3>${startCount}%</h3>`;
-        countbarRef.current.style.width = `${startCount}%`;
+        if (countbarRef.current) {
+          countbarRef.current.innerHTML = `<h3>${startCount}%</h3>`;
+          countbarRef.current.style.width = `${startCount}%`;
 
-        if (startCount === percentage) {
-          clearInterval(stop);
+          if (startCount === percentage) {
+            clearInterval(stop);
+          }
         }
-      }
-    };
+      };
 
-    const stop = setInterval(() => {
-      progressBar();
-    }, 25);
+      const stop = setInterval(() => {
+        progressBar();
+      }, 25);
 
-    return () => clearInterval(stop);
-  }, [percentage]);
+      return () => clearInterval(stop);
+    }
+  }, [percentage, inView]);
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4" ref={ref}>
       {skillIcon}
       <div className="rounded-full grow border-yellow border-2 p-2">
         <div
