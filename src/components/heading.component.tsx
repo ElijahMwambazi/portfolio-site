@@ -1,4 +1,5 @@
 import Border from "./border.component";
+import RandomizedText from "./randomized-text.componenet";
 
 export type HeadingProps = {
   firstPartOfText: string;
@@ -11,12 +12,16 @@ const Heading = ({
 }: HeadingProps) => {
   return (
     <div className="mb-7">
-      <p className="font-bungee font-semibold text-2xl">
-        {firstPartOfText}
-        <span className="text-dark-gray">
-          {secondPartOfText}
-        </span>
-      </p>
+      <RandomizedText
+        className="font-bungee font-semibold text-2xl inline"
+        textToRandomize={firstPartOfText}
+        singleWord={true}
+      />
+      <RandomizedText
+        className="font-bungee font-semibold text-2xl inline text-dark-gray"
+        textToRandomize={secondPartOfText}
+        singleWord={true}
+      />
       {
         <Border className="-mt-1 h-2 bg-white rounded" />
       }
