@@ -81,7 +81,7 @@ function App() {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <Particles />
+            <Particles className={"mt-20"} />
             <div className="w-5/6 mx-auto md:h-full">
               <Skills />
             </div>
