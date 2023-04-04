@@ -80,6 +80,9 @@ import { ReactComponent as ExcelIcon } from "../assets/skills/tools/excel.svg";
 import { ReactComponent as ElasticsearchIcon } from "../assets/skills/tools/elasticsearch.svg";
 import { ReactComponent as AccessIcon } from "../assets/skills/tools/access.svg";
 import SkillsHeader from "../components/skills-header.component";
+import SkillConatiner from "../components/skill-container.component";
+import SkillCardsContainer from "../components/skills-card-container.componenet";
+import ShootingStars from "../components/shooting-stars.component";
 
 export type ShowSkills = {
   showProgrammingLanguges: boolean;
@@ -90,7 +93,7 @@ export type ShowSkills = {
   showDataScienceSkills: boolean;
   showTools: boolean;
   showVersionControl: boolean;
-  showBlockChain: boolean;
+  showBlockchain: boolean;
   showDigitalmarketing: boolean;
 };
 
@@ -108,7 +111,7 @@ const Skills = () => {
       showDataScienceSkills: false,
       showTools: false,
       showVersionControl: false,
-      showBlockChain: false,
+      showBlockchain: false,
       showDigitalmarketing: false,
     });
 
@@ -121,7 +124,7 @@ const Skills = () => {
     SHOW_DATA_SCIENCE_SKILLS = "showDataScienceSkills",
     SHOW_TOOLS = "showTools",
     SHOW_VERSION_CONTROL = "showVersionControl",
-    SHOW_BLOCK_CHAIN = "showBlockChain",
+    SHOW_BLOCKCHAIN = "showBlockchain",
     SHOW_DIGITAL_MARKETING = "showDigitalMarketing",
   }
 
@@ -162,7 +165,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Programming Languages */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={
               showSkills.showProgrammingLanguges
@@ -173,16 +176,10 @@ const Skills = () => {
             heading={"Progamming Languages"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showProgrammingLanguges
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity: showSkills ? 1 : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* Javascript */}
             <SkillCard
@@ -264,11 +261,11 @@ const Skills = () => {
               title="Go Lang"
               percentage={15}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
 
         {/* Frontend Skills */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={showSkills.showFrontendSkills}
             onSKillClick={toggleSkill(
@@ -277,19 +274,10 @@ const Skills = () => {
             heading={"Frontend"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showFrontendSkills
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity:
-                showSkills.showFrontendSkills
-                  ? 1
-                  : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* HTML */}
             <SkillCard
@@ -403,11 +391,11 @@ const Skills = () => {
               title="Redux and Redux Toolkit"
               percentage={100}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
 
         {/* Backend skills */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={showSkills.showBackendSkills}
             onSKillClick={toggleSkill(
@@ -416,16 +404,10 @@ const Skills = () => {
             heading={"Backend"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showBackendSkills
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity: showSkills ? 1 : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* .Net Framework */}
             <SkillCard
@@ -507,11 +489,11 @@ const Skills = () => {
               title="Spring Boot"
               percentage={15}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
 
         {/* Mobile App Development skills */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={showSkills.showMoblieSkills}
             onSKillClick={toggleSkill(
@@ -520,16 +502,10 @@ const Skills = () => {
             heading={"Mobile App Development"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showMoblieSkills
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity: showSkills ? 1 : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* Flutter */}
             <SkillCard
@@ -547,11 +523,11 @@ const Skills = () => {
               title="React Native"
               percentage={15}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
 
         {/* Database skills */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={showSkills.showDatabaseSkills}
             onSKillClick={toggleSkill(
@@ -560,16 +536,10 @@ const Skills = () => {
             heading={"Databases"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showDatabaseSkills
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity: showSkills ? 1 : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* Firebase */}
             <SkillCard
@@ -627,11 +597,11 @@ const Skills = () => {
               title="Radis"
               percentage={15}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
 
         {/* Data Science skills */}
-        <motion.div className="div">
+        <SkillConatiner>
           <SkillsHeader
             skill={
               showSkills.showDataScienceSkills
@@ -642,19 +612,10 @@ const Skills = () => {
             heading={"Data Science"}
           />
 
-          <div
-            className={`grid grid-cols-3 gap-4 w-full px-10 ${
+          <SkillCardsContainer
+            showSkills={
               showSkills.showDataScienceSkills
-                ? ""
-                : "hidden"
-            }`}
-            style={{
-              opacity:
-                showSkills.showDataScienceSkills
-                  ? 1
-                  : 0,
-              transition: "all 0.5s ease-in-out",
-            }}
+            }
           >
             {/* Numpy */}
             <SkillCard
@@ -744,9 +705,164 @@ const Skills = () => {
               title="Scipy"
               percentage={15}
             />
-          </div>
-        </motion.div>
+          </SkillCardsContainer>
+        </SkillConatiner>
+
+        {/* Blockchain */}
+        <SkillConatiner>
+          <SkillsHeader
+            skill={showSkills.showBlockchain}
+            onSKillClick={toggleSkill(
+              ShowSkillsKeys.SHOW_BLOCKCHAIN
+            )}
+            heading={"Blockchain"}
+          />
+
+          <SkillCardsContainer
+            showSkills={showSkills.showBlockchain}
+          >
+            {/* Solidity */}
+            <SkillCard
+              skillIcon={
+                <SolidityIcon className="w-8 h-8" />
+              }
+              title="Solidity"
+              percentage={15}
+            />
+          </SkillCardsContainer>
+        </SkillConatiner>
+
+        {/* Version Control */}
+        <SkillConatiner>
+          <SkillsHeader
+            skill={showSkills.showVersionControl}
+            onSKillClick={toggleSkill(
+              ShowSkillsKeys.SHOW_VERSION_CONTROL
+            )}
+            heading={"Version Control"}
+          />
+
+          <SkillCardsContainer
+            showSkills={
+              showSkills.showVersionControl
+            }
+          >
+            {/* Git */}
+            <SkillCard
+              skillIcon={
+                <GitIcon className="w-8 h-8" />
+              }
+              title="Git"
+              percentage={100}
+            />
+            {/* Github */}
+            <SkillCard
+              skillIcon={
+                <GithubIcon className="w-8 h-8" />
+              }
+              title="Github"
+              percentage={100}
+            />
+            {/* Gitlab */}
+            <SkillCard
+              skillIcon={
+                <GitladIcon className="w-8 h-8" />
+              }
+              title="Githlab"
+              percentage={70}
+            />
+            {/* bitbucket */}
+            <SkillCard
+              skillIcon={
+                <BitbucketIcon className="w-8 h-8" />
+              }
+              title="Bitbucket"
+              percentage={70}
+            />
+          </SkillCardsContainer>
+        </SkillConatiner>
+
+        {/* Tools */}
+        <SkillConatiner>
+          <SkillsHeader
+            skill={showSkills.showTools}
+            onSKillClick={toggleSkill(
+              ShowSkillsKeys.SHOW_TOOLS
+            )}
+            heading={"Tools"}
+          />
+
+          <SkillCardsContainer
+            showSkills={showSkills.showTools}
+          >
+            {/* Power BI */}
+            <SkillCard
+              skillIcon={
+                <PowerBIIcon className="w-8 h-8" />
+              }
+              title="Power BI"
+              percentage={100}
+            />
+            {/* Tableau */}
+            <SkillCard
+              skillIcon={
+                <TableauIcon className="w-8 h-8" />
+              }
+              title="Tableau"
+              percentage={100}
+            />
+            {/* Docker */}
+            <SkillCard
+              skillIcon={
+                <DockerIcon className="w-8 h-8" />
+              }
+              title="Docker"
+              percentage={15}
+            />
+            {/* Kubernetes */}
+            <SkillCard
+              skillIcon={
+                <KubernetesIcon className="w-8 h-8" />
+              }
+              title="Kubernetes"
+              percentage={15}
+            />
+            {/* Figma */}
+            <SkillCard
+              skillIcon={
+                <FigmaIcon className="w-8 h-8" />
+              }
+              title="Figma"
+              percentage={15}
+            />
+            {/* Excel */}
+            <SkillCard
+              skillIcon={
+                <ExcelIcon className="w-8 h-8" />
+              }
+              title="Excel"
+              percentage={100}
+            />
+            {/* Elastic Search */}
+            <SkillCard
+              skillIcon={
+                <ElasticsearchIcon className="w-8 h-8" />
+              }
+              title="Elastic Search"
+              percentage={15}
+            />
+            {/* Access */}
+            <SkillCard
+              skillIcon={
+                <AccessIcon className="w-8 h-8" />
+              }
+              title="Access"
+              percentage={15}
+            />
+          </SkillCardsContainer>
+        </SkillConatiner>
       </div>
+      {/* <ShootingStars /> */}
     </section>
   );
 };
