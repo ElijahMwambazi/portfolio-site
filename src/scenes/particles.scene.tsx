@@ -14,7 +14,13 @@ export type Particle = {
   animationDuration: number;
 };
 
-const Particles = () => {
+export type ParticlesProps = {
+  className?: string;
+};
+
+const Particles = ({
+  className,
+}: ParticlesProps) => {
   const [particles, setParticles] = useState<
     Particle[]
   >([]);
@@ -69,7 +75,9 @@ const Particles = () => {
   }, []);
 
   return (
-    <div className="relative bg-gray-100 bg-opacity-60 z-10 h-5 w-full mt-20">
+    <div
+      className={`relative bg-gray-100 bg-opacity-60 z-10 h-5 w-full ${className}`}
+    >
       {particles.map((particle) => (
         <div
           key={particle.key}
