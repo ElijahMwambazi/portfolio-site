@@ -20,7 +20,7 @@ const Landing = ({
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center py-10 sm:py-0"
+      className="section-landing md:flex md:justify-between md:items-center sm:py-0"
     >
       {/* IMAGE */}
       <motion.div
@@ -44,7 +44,7 @@ const Landing = ({
       </motion.div>
 
       {/* TEXT */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+      <div className="z-30 basis-2/5 md:mt-32 md:text-center">
         {/* HEADING */}
         <motion.div
           initial="hidden"

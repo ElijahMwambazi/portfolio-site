@@ -195,30 +195,6 @@ body,
 /* ****************** */
 /* SHOTTING STARS */
 /* ****************** */
-@keyframes animate-bg {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(315deg) translateX(0);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(315deg) translateX(-1000px);
-    opacity: 0;
-  }
-}
-
 @keyframes shooting-star {
   0% {
     transform: rotate(315deg) translateX(0);
@@ -233,42 +209,6 @@ body,
   }
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.animation-delay-6000 {
-  animation-delay: 6s;
-}
-
-.animation-delay-8000 {
-  animation-delay: 8s;
-}
-
-.animation-delay-10000 {
-  animation-delay: 10s;
-}
-
-.animation-delay-12000 {
-  animation-delay: 12s;
-}
-
-.animation-delay-14000 {
-  animation-delay: 14s;
-}
-
-.animation-delay-7500 {
-  animation-delay: 7.5s;
-}
-
-.animation-delay-27500 {
-  animation-delay: 27.5s;
-}
-
 /* ****************** */
 /* Skills Cards Animation */
 /* ****************** */
@@ -276,20 +216,27 @@ body,
   0% {
     transform: translateY(-10%);
     opacity: 0;
+    display: none;
+    visibility: hidden;
   }
   100% {
     transform: translateY(0%);
     opacity: 1;
+    visibility: visible;
   }
 }
 
-@keyframes goUp {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(10%);
-    opacity: 0;
-  }
+/* ****************** */
+/* Landing Section */
+/* ****************** */
+.section-landing {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+/* ****************** */
+/* Skills Header */
+/* ****************** */
+.skill-header {
+  cursor: pointer;
 }

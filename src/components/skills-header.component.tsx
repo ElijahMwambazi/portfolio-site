@@ -16,7 +16,7 @@ const SkillsHeader = ({
 }: SkillsHeaderProps) => {
   return (
     <div
-      className={`mt-10 ${
+      className={`mt-10 skill-header ${
         skill
           ? "text-yellow mb-7"
           : "text-dark-gray"
