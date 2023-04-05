@@ -30,11 +30,24 @@ const ProgressBar = ({
         startCount++;
 
         if (countbarRef.current) {
-          countbarRef.current.innerHTML = `<h3>${startCount}%</h3>`;
-          countbarRef.current.style.width = `${startCount}%`;
+          if (percentage <= 20) {
+            countbarRef.current.innerHTML =
+              "<h3>TODO</h3>";
+            countbarRef.current.style.width =
+              "100%";
+            countbarRef.current.style.color =
+              "white";
+            countbarRef.current.style.justifyContent =
+              "center";
+          }
 
-          if (startCount === percentage) {
-            clearInterval(stop);
+          if (percentage > 20) {
+            countbarRef.current.innerHTML = `<h3>${startCount}%</h3>`;
+            countbarRef.current.style.width = `${startCount}%`;
+
+            if (startCount === percentage) {
+              clearInterval(stop);
+            }
           }
         }
       };
@@ -53,7 +66,6 @@ const ProgressBar = ({
       <div className="rounded-full grow border-yellow border-2 p-2">
         <div
           className="font-montserrat text-sm bg-yellow flex justify-end rounded-full px-2 text-dark-green font-bold"
-          data-percentnumber={percentage}
           ref={countbarRef}
         />
       </div>
