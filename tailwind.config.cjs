@@ -23,7 +23,8 @@ module.exports = {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
-        bungee: ["Bungee", "cursive"]
+        bungee: ["Bungee", "cursive"],
+        josefinSans: ['Josefin Sans', "sans-serif"]
       },
       content: {
         brush: "url('./assets/brush.png')",
