@@ -16,7 +16,7 @@ const SkillsHeader = ({
 }: SkillsHeaderProps) => {
   return (
     <div
-      className={`mt-10 skill-header ${
+      className={`skills-header mt-10 ${
         skill
           ? "text-yellow mb-7"
           : "text-dark-gray"
@@ -26,8 +26,8 @@ const SkillsHeader = ({
       <RandomizedText
         textToRandomize={heading}
         singleWord={false}
-        className={`font-playfair font-bold text-2xl
-      text-justify md:text-start `}
+        className={`font-josefinSans text-2xl
+      text-justify md:text-start`}
       />
       <ArrowIcon
         className={`${

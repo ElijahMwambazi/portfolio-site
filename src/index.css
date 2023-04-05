@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -195,7 +197,7 @@ body,
 /* ****************** */
 /* SHOTTING STARS */
 /* ****************** */
-@keyframes shooting-star {
+@keyframes shootingStar {
   0% {
     transform: rotate(315deg) translateX(0);
     opacity: 1;
@@ -237,6 +239,29 @@ body,
 /* ****************** */
 /* Skills Header */
 /* ****************** */
-.skill-header {
+.skills-header {
   cursor: pointer;
 }
+
+/* .skills-header::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border-top: 2px solid #fdcc49;
+  border-left: 2px solid #fdcc49;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* .skills-header::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  border-bottom: 2px solid #fdcc49;
+  border-right: 2px solid #fdcc49;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
