@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
 /*
 ! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 */
@@ -559,12 +561,20 @@ video {
   top: 0px;
 }
 
+.top-80{
+  top: 20rem;
+}
+
 .top-\[60\%\]{
   top: 60%;
 }
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .z-30{
@@ -584,9 +594,12 @@ video {
   margin-right: auto;
 }
 
-.my-5{
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+.-mt-1{
+  margin-top: -0.25rem;
+}
+
+.mb-7{
+  margin-bottom: 1.75rem;
 }
 
 .ml-\[33\%\]{
@@ -601,20 +614,28 @@ video {
   margin-top: 3rem;
 }
 
-.mt-16{
-  margin-top: 4rem;
+.mt-20{
+  margin-top: 5rem;
 }
 
-.mt-32{
-  margin-top: 8rem;
+.mt-24{
+  margin-top: 6rem;
 }
 
 .block{
   display: block;
 }
 
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
+}
+
+.grid{
+  display: grid;
 }
 
 .hidden{
@@ -629,16 +650,24 @@ video {
   height: 0.125rem;
 }
 
-.h-10{
-  height: 2.5rem;
+.h-2{
+  height: 0.5rem;
 }
 
 .h-3{
   height: 0.75rem;
 }
 
+.h-4{
+  height: 1rem;
+}
+
 .h-5{
   height: 1.25rem;
+}
+
+.h-8{
+  height: 2rem;
 }
 
 .h-full{
@@ -661,12 +690,20 @@ video {
   width: 0.75rem;
 }
 
+.w-4{
+  width: 1rem;
+}
+
 .w-5{
   width: 1.25rem;
 }
 
 .w-5\/6{
   width: 83.333333%;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-\[300px\]{
@@ -679,6 +716,10 @@ video {
 
 .max-w-\[400px\]{
   max-width: 400px;
+}
+
+.grow{
+  flex-grow: 1;
 }
 
 .basis-2\/5{
@@ -695,6 +736,10 @@ video {
 
 .resize{
   resize: both;
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -725,6 +770,10 @@ video {
   gap: 4rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -737,6 +786,10 @@ video {
   overflow: hidden;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -745,20 +798,13 @@ video {
   border-width: 1px;
 }
 
-.border-y-2{
-  border-top-width: 2px;
-  border-bottom-width: 2px;
+.border-2{
+  border-width: 2px;
 }
 
-.border-y-yellow{
+.border-yellow{
   --tw-border-opacity: 1;
-  border-top-color: rgb(253 204 73 / var(--tw-border-opacity));
-  border-bottom-color: rgb(253 204 73 / var(--tw-border-opacity));
-}
-
-.bg-\[\#ffcb00\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 203 0 / var(--tw-bg-opacity));
+  border-color: rgb(253 204 73 / var(--tw-border-opacity));
 }
 
 .bg-dark-gray{
@@ -766,9 +812,19 @@ video {
   background-color: rgb(117 117 117 / var(--tw-bg-opacity));
 }
 
-.bg-green{
+.bg-dark-green{
   --tw-bg-opacity: 1;
   background-color: rgb(8 21 25 / var(--tw-bg-opacity));
+}
+
+.bg-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 255 0 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-yellow{
@@ -784,12 +840,30 @@ video {
   fill: #757575;
 }
 
+.fill-yellow{
+  fill: #FDCC49;
+}
+
 .p-12{
   padding: 3rem;
 }
 
 .p-2{
   padding: 0.5rem;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-7{
@@ -811,16 +885,20 @@ video {
   padding-bottom: 6rem;
 }
 
-.pt-12{
-  padding-top: 3rem;
-}
-
 .text-justify{
   text-align: justify;
 }
 
 .font-bungee{
   font-family: Bungee, cursive;
+}
+
+.font-josefinSans{
+  font-family: Josefin Sans, sans-serif;
+}
+
+.font-montserrat{
+  font-family: Montserrat, sans-serif;
 }
 
 .font-opensans{
@@ -872,7 +950,7 @@ video {
   color: rgb(117 117 117 / var(--tw-text-opacity));
 }
 
-.text-green{
+.text-dark-green{
   --tw-text-opacity: 1;
   color: rgb(8 21 25 / var(--tw-text-opacity));
 }
@@ -928,9 +1006,21 @@ body,
 .app {
   height: 100%;
   background-color: #081519;
-  overflow: hidde;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #75757559;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #757575;
 }
 
 ::-moz-selection {
@@ -981,52 +1071,48 @@ body,
 
 /* ******************* */
 
-/* BUTTON */
+/* PARTICLES */
 
 /* ******************* */
 
 @keyframes particleFall1 {
   0% {
-    transform: translate(0vw, 0vh);
+    transform: translate(0%, 0%);
   }
 
   100% {
-    transform: translate(50vw, 150vh);
+    transform: translate(50%, 150%);
   }
 }
 
 @keyframes particleFall2 {
   0% {
-    transform: translate(-10vw, -10vh);
+    transform: translate(-10%, -10%);
   }
 
   100% {
-    transform: translate(60vw, 150vh);
+    transform: translate(60%, 150%);
   }
 }
 
 @keyframes particleFall3 {
   0% {
-    transform: translate(10vw, 0vh);
+    transform: translate(10%, 0%);
   }
 
   100% {
-    transform: translate(40vw, 150vh);
+    transform: translate(40%, 150%);
   }
 }
 
 @keyframes particleFall4 {
   0% {
-    transform: translate(0vw, 0vh);
+    transform: translate(0%, 0%);
   }
 
   100% {
-    transform: translate(40vw, 150vh);
+    transform: translate(40%, 150%);
   }
-}
-
-.particle {
-  background-color: #fdcc49;
 }
 
 .particleAnimation1 {
@@ -1119,13 +1205,100 @@ body,
 
 @keyframes moveText {
   0% {
-    transform: translateX(800%);
+    transform: translateX(100%);
   }
 
   100% {
-    transform: translateX(-800%);
+    transform: translateX(-100%);
   }
 }
+
+/* ****************** */
+
+/* SHOTTING STARS */
+
+/* ****************** */
+
+@keyframes shootingStar {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+/* ****************** */
+
+/* Skills Cards Animation */
+
+/* ****************** */
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ****************** */
+
+/* Landing Section */
+
+/* ****************** */
+
+.section-landing {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+/* ****************** */
+
+/* Skills Header */
+
+/* ****************** */
+
+.skills-header {
+  cursor: pointer;
+}
+
+/* .skills-header::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border-top: 2px solid #fdcc49;
+  border-left: 2px solid #fdcc49;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* .skills-header::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  border-bottom: 2px solid #fdcc49;
+  border-right: 2px solid #fdcc49;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
 
 .selection\:bg-yellow *::-moz-selection{
   --tw-bg-opacity: 1;
@@ -1237,6 +1410,17 @@ body,
   opacity: 0.5;
 }
 
+@media (min-width: 768px){
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
 @media (min-width: 1060px){
   .md\:order-2{
     order: 2;
@@ -1252,6 +1436,10 @@ body,
 
   .md\:h-full{
     height: 100%;
+  }
+
+  .md\:w-1\/3{
+    width: 33.333333%;
   }
 
   .md\:max-w-\[600px\]{
@@ -1270,8 +1458,8 @@ body,
     justify-content: space-between;
   }
 
-  .md\:gap-16{
-    gap: 4rem;
+  .md\:text-center{
+    text-align: center;
   }
 
   .md\:text-start{
