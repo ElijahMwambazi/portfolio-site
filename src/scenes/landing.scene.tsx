@@ -67,7 +67,7 @@ const Landing = ({
             singleWord={true}
           />
           <RandomizedText
-            className="font-playfair mt-10 text-justify leading-7 md:text-start"
+            className="font-josefinSans mt-10 text-justify leading-7 md:text-start"
             textToRandomize="Software engineer who enjoys connecting
             the dots: be it ideas from different
             disciplines, people from different teams, or
