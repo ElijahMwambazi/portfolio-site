@@ -11,7 +11,7 @@ const SkillCardsContainer = ({
 }: SkillCardContainerProps) => {
   return (
     <div
-      className={`grid grid-cols-3 gap-6 w-full px-10`}
+      className={`grid md:grid-cols-3 sm:grid-cols-2 gap-6 w-full px-10`}
       style={{
         display: `${showSkills ? "" : "none"}`,
         animation: `${
