@@ -8,7 +8,7 @@ import { ReactComponent as JavaScriptIcon } from "../assets/skills/programming-l
 import { ReactComponent as TypeScriptIcon } from "../assets/skills/programming-languages/type-script.svg";
 import { ReactComponent as PythonIcon } from "../assets/skills/programming-languages/python.svg";
 import { ReactComponent as JavaIcon } from "../assets/skills/programming-languages/java.svg";
-import { ReactComponent as CPlusPlusIcon } from "../assets/skills/programming-languages/Cplusplus.svg";
+import { ReactComponent as CPlusPlusIcon } from "../assets/skills/programming-languages/cplusplus.svg";
 import { ReactComponent as CSharpIcon } from "../assets/skills/programming-languages/c-sharp.svg";
 import { ReactComponent as RustIcon } from "../assets/skills/programming-languages/rust.svg";
 import { ReactComponent as RubyIcon } from "../assets/skills/programming-languages/ruby.svg";
