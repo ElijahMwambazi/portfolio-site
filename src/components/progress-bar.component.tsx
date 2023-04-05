@@ -54,7 +54,7 @@ const ProgressBar = ({
 
       const stop = setInterval(() => {
         progressBar();
-      }, 25);
+      }, 5);
 
       return () => clearInterval(stop);
     }
