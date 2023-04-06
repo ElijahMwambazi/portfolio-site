@@ -44,7 +44,7 @@ const Landing = ({
       </motion.div>
 
       {/* TEXT */}
-      <div className="z-30 basis-2/5 md:mt-32 md:text-center mt-12">
+      <div className="z-30 basis-2/5 md:mt-32 mt-12">
         {/* HEADING */}
         <motion.div
           initial="hidden"
@@ -57,17 +57,17 @@ const Landing = ({
           }}
         >
           <RandomizedText
-            className="font-bungee text-6xl capitalize z-10 md:text-start"
+            className="font-bungee text-6xl capitalize z-10 text-center md:text-justify sm:text-center xs:text-center"
             textToRandomize="Elijah"
             singleWord={true}
           />
           <RandomizedText
-            className="font-bungee text-6xl text-dark-gray capitalize z-10 md:text-start"
+            className="font-bungee text-6xl text-dark-gray capitalize z-10 text-center md:text-justify sm:text-center xs:text-center"
             textToRandomize="Mwambazi"
             singleWord={true}
           />
           <RandomizedText
-            className="font-josefinSans mt-10 text-justify leading-7 md:text-start"
+            className="font-josefinSans mt-10 leading-7 text-center md:text-justify sm:text-center xs:text-center"
             textToRandomize="Software engineer who enjoys connecting
             the dots: be it ideas from different
             disciplines, people from different teams, or
