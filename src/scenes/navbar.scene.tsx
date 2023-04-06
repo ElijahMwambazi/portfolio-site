@@ -57,7 +57,7 @@ const NavBar = ({
         {/* MOBILE NAVBAR POPUP */}
         {!isAboveSmallScreens &&
           isMenuToggled && (
-            <div className="fixed right-0 bottom-0 h-full bg-dark-green w-[300px]">
+            <div className="fixed right-0 bottom-0 h-full bg-dark-green w-[300px] border-l-2 border-dark-gray">
               {/* MOBLIE NAVBAR CLOSE BUTTON */}
               <div className="flex justify-end p-12">
                 <MenuButton
