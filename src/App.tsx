@@ -31,9 +31,6 @@ function App() {
   const isAboveMediumScreens = useMediaQuery(
     "(min-width: 1060px)"
   );
-  const isAboveSmallScreens = useMediaQuery(
-    "(min-width: 768px)"
-  );
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -68,7 +65,7 @@ function App() {
       <div className="relative selection:bg-yellow selection:text-black overflow-hidden">
         {showContent ? (
           <Fragment>
-            {isAboveSmallScreens && (
+            {isAboveMediumScreens && (
               <CursorTrailer />
             )}
             <NavBar
