@@ -44,7 +44,7 @@ const Landing = ({
       </motion.div>
 
       {/* TEXT */}
-      <div className="z-30 basis-2/5 md:mt-32 md:text-center">
+      <div className="z-30 basis-2/5 md:mt-32 md:text-center mt-4">
         {/* HEADING */}
         <motion.div
           initial="hidden"
