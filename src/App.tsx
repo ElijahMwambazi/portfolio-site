@@ -11,6 +11,8 @@ import CursorTrailer from "./components/cursor-trailer.component";
 import WelcomeScreen from "./scenes/welcome-screen.scene";
 import Skills from "./scenes/skills.scene";
 import Particles from "./scenes/particles.scene";
+import Projects from "./scenes/projects.scene";
+import ShootingStars from "./components/shooting-stars.component";
 
 export type IsTopOfPage = boolean;
 export type SelectedPage = string;
@@ -25,8 +27,12 @@ function App() {
     useState(true);
   const [selectedPage, setSelectedPage] =
     useState("home");
+
   const isAboveMediumScreens = useMediaQuery(
     "(min-width: 1060px)"
+  );
+  const isAboveSmallScreens = useMediaQuery(
+    "(min-width: 768px)"
   );
 
   useEffect(() => {
@@ -62,7 +68,9 @@ function App() {
       <div className="relative selection:bg-yellow selection:text-black overflow-hidden">
         {showContent ? (
           <Fragment>
-            <CursorTrailer />
+            {isAboveSmallScreens && (
+              <CursorTrailer />
+            )}
             <NavBar
               isTopOfPage={isTopOfPage}
               selectedPage={selectedPage}
@@ -84,6 +92,11 @@ function App() {
             <Particles className={"mt-20"} />
             <div className="w-5/6 mx-auto md:h-full">
               <Skills />
+            </div>
+            <Particles />
+            <div className="relative w-5/6 mx-auto md:h-full">
+              <Projects />
+              {/* <ShootingStars /> */}
             </div>
             <Particles />
           </Fragment>
