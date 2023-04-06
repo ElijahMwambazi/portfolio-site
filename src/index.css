@@ -24,7 +24,7 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #75757559;
+  background-color: #081519;
   border-radius: 10px;
 }
 
@@ -242,26 +242,3 @@ body,
 .skills-header {
   cursor: pointer;
 }
-
-/* .skills-header::before {
-  content: "";
-  width: 20%;
-  height: 100%;
-  border-top: 2px solid #fdcc49;
-  border-left: 2px solid #fdcc49;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
-/* .skills-header::after {
-  content: "";
-  width: 50%;
-  height: 100%;
-  border-bottom: 2px solid #fdcc49;
-  border-right: 2px solid #fdcc49;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-} */
