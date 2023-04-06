@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Heading from "../components/heading.component";
-// import ProjectsContainer from "../components/projects-container.component";
+import ProjectsContainer from "../components/projects-container.component";
 
 const Projects = () => {
   const isAboveMediumScreens = useMediaQuery(
@@ -44,7 +44,7 @@ const Projects = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        {/* <ProjectsContainer projects={[]} /> */}
+        <ProjectsContainer />
       </motion.div>
     </section>
   );
