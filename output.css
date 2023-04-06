@@ -521,46 +521,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 480px){
-  .container{
-    max-width: 480px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1060px){
-  .container{
-    max-width: 1060px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .pointer-events-none{
   pointer-events: none;
 }
@@ -660,10 +620,6 @@ video {
 
 .mt-24{
   margin-top: 6rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .block{
@@ -838,6 +794,19 @@ video {
   border-width: 2px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-l-2{
+  border-left-width: 2px;
+}
+
+.border-dark-gray{
+  --tw-border-opacity: 1;
+  border-color: rgb(117 117 117 / var(--tw-border-opacity));
+}
+
 .border-yellow{
   --tw-border-opacity: 1;
   border-color: rgb(253 204 73 / var(--tw-border-opacity));
@@ -914,6 +883,14 @@ video {
 
 .pb-24{
   padding-bottom: 6rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-justify{
@@ -1046,7 +1023,7 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #75757559;
+  background-color: #081519;
   border-radius: 10px;
 }
 
@@ -1310,13 +1287,13 @@ body,
 
 /* .skills-header::before {
   content: "";
-  width: 20%;
-  height: 100%;
-  border-top: 2px solid #fdcc49;
-  border-left: 2px solid #fdcc49;
+  width: 50%;
+  height: 2%;
+  background: yellow;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 } */
 
 /* .skills-header::after {
@@ -1441,6 +1418,12 @@ body,
   opacity: 0.5;
 }
 
+@media (min-width: 480px){
+  .xs\:text-center{
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px){
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1449,6 +1432,10 @@ body,
   .sm\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .sm\:text-center{
+    text-align: center;
   }
 }
 
@@ -1459,10 +1446,6 @@ body,
 
   .md\:mt-32{
     margin-top: 8rem;
-  }
-
-  .md\:mb-4{
-    margin-bottom: 1rem;
   }
 
   .md\:flex{
@@ -1497,8 +1480,12 @@ body,
     justify-content: space-between;
   }
 
-  .md\:text-center{
-    text-align: center;
+  .md\:text-left{
+    text-align: left;
+  }
+
+  .md\:text-justify{
+    text-align: justify;
   }
 
   .md\:text-start{
