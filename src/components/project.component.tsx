@@ -1,28 +1,31 @@
 import Button from "./button.component";
+import { ReactComponent as GitHubIcon } from "../assets/socials/github.svg";
 
 export type ProjectProps = {
-  id: number;
   imgSrc: string;
   title: string;
   description: string;
+  isActive: boolean;
+  href: string;
 };
 
 const Project = ({
-  id,
   imgSrc,
   title,
   description,
+  isActive,
+  href,
 }: ProjectProps) => {
   return (
-    <div className="item" id={`project-${id}`}>
+    <div className="border-2 border-yellow">
       <img src={imgSrc} alt={title} />
-      <div className="text">
+      <div className="">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className="">{description}</p>
       </div>
       <Button
-        href={"#"}
-        text={"Learn More"}
+        href={href}
+        text={"View Project"}
         animated={true}
         isWordSingle={false}
       />
