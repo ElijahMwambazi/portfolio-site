@@ -1,10 +1,19 @@
 import Project, {
   ProjectProps,
 } from "./project.component";
-import { ReactComponent as GitHubIcon } from "../assets/socials/github.svg";
 
 const ProjectsContainer = () => {
-  return <div></div>;
+  return (
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+      <Project
+        imgSrc={""}
+        title={""}
+        description={""}
+        isActive={false}
+        href={""}
+      />
+    </div>
+  );
 };
 
 export default ProjectsContainer;
