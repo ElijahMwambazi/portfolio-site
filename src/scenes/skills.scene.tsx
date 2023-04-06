@@ -82,7 +82,6 @@ import { ReactComponent as AccessIcon } from "../assets/skills/tools/access.svg"
 import SkillsHeader from "../components/skills-header.component";
 import SkillConatiner from "../components/skill-container.component";
 import SkillCardsContainer from "../components/skills-card-container.componenet";
-import ShootingStars from "../components/shooting-stars.component";
 
 export type ShowSkills = {
   showProgrammingLanguges: boolean;
@@ -862,7 +861,6 @@ const Skills = () => {
           </SkillCardsContainer>
         </SkillConatiner>
       </div>
-      {/* <ShootingStars /> */}
     </section>
   );
 };
