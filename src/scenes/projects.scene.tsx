@@ -34,7 +34,6 @@ const Projects = () => {
 
       {/* Projects Container */}
       <motion.div
-        className="md:w-1/3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
