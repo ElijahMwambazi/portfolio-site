@@ -99,7 +99,7 @@ const Landing = ({
           <div className="flex gap-4">
             <Button
               href="https://drive.google.com/file/d/1Hs3wCMTGyyTun-JotnUaEFdV24GlIgB_/view?usp=sharing"
-              text="Download CV"
+              toDisplay="Download CV"
               animated={false}
               isWordSingle={false}
             />
@@ -109,7 +109,7 @@ const Landing = ({
                 setSelectedPage("contact")
               }
               href="#contact"
-              text="Contact Me"
+              toDisplay="Contact Me"
               animated={true}
               isWordSingle={false}
             />
