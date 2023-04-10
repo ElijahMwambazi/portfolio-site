@@ -14,11 +14,6 @@ module.exports = {
         "deep-blue": "#010026",
         "opaque-black": "rgba(0,0,0,0.35)"
       },
-      backgroundImage: (theme) => ({
-        // "gradient-left": "linear-gradient(to right, #081519, #FDCC49)",
-        "gyg": "linear-gradient(90deg, rgba(8,21,25,1) 20%, rgba(253,204,73,1) 50%, rgba(8,21,25,1) 80%)",
-        wallpaper: "url('./src/assets/background.png)"
-      }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
