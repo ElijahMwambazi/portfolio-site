@@ -545,12 +545,24 @@ video {
   bottom: 0px;
 }
 
+.bottom-3{
+  bottom: 0.75rem;
+}
+
 .left-0{
   left: 0px;
 }
 
+.left-6{
+  left: 1.5rem;
+}
+
 .right-0{
   right: 0px;
+}
+
+.right-6{
+  right: 1.5rem;
 }
 
 .right-7{
@@ -561,12 +573,28 @@ video {
   top: 0px;
 }
 
+.top-3{
+  top: 0.75rem;
+}
+
 .top-80{
   top: 20rem;
 }
 
 .top-\[60\%\]{
   top: 60%;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
+}
+
+.left-2{
+  left: 0.5rem;
+}
+
+.bottom-1{
+  bottom: 0.25rem;
 }
 
 .z-10{
@@ -589,6 +617,10 @@ video {
   z-index: 50;
 }
 
+.z-\[-1\]{
+  z-index: -1;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -598,8 +630,16 @@ video {
   margin-top: -0.25rem;
 }
 
+.mb-12{
+  margin-bottom: 3rem;
+}
+
 .mb-7{
   margin-bottom: 1.75rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .ml-\[33\%\]{
@@ -620,6 +660,10 @@ video {
 
 .mt-24{
   margin-top: 6rem;
+}
+
+.mt-\[4px\]{
+  margin-top: 4px;
 }
 
 .block{
@@ -658,6 +702,14 @@ video {
   height: 0.75rem;
 }
 
+.h-4{
+  height: 1rem;
+}
+
+.h-40{
+  height: 10rem;
+}
+
 .h-5{
   height: 1.25rem;
 }
@@ -674,6 +726,10 @@ video {
   height: 100vh;
 }
 
+.h-60{
+  height: 15rem;
+}
+
 .w-0{
   width: 0px;
 }
@@ -688,6 +744,10 @@ video {
 
 .w-3{
   width: 0.75rem;
+}
+
+.w-4{
+  width: 1rem;
 }
 
 .w-5{
@@ -766,6 +826,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-20{
+  gap: 5rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -776,6 +840,14 @@ video {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.overflow-scroll{
+  overflow: scroll;
+}
+
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 
 .rounded{
@@ -792,10 +864,6 @@ video {
 
 .border-2{
   border-width: 2px;
-}
-
-.border-b-2{
-  border-bottom-width: 2px;
 }
 
 .border-l-2{
@@ -844,6 +912,11 @@ video {
   fill: #FDCC49;
 }
 
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .p-12{
   padding: 3rem;
 }
@@ -854,6 +927,10 @@ video {
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-14{
+  padding: 3.5rem;
 }
 
 .px-10{
@@ -883,10 +960,6 @@ video {
 
 .pb-24{
   padding-bottom: 6rem;
-}
-
-.text-left{
-  text-align: left;
 }
 
 .text-center{
@@ -972,9 +1045,35 @@ video {
   opacity: 0;
 }
 
+.opacity-20{
+  opacity: 0.2;
+}
+
+.opacity-10{
+  opacity: 0.1;
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.opacity-30{
+  opacity: 0.3;
+}
+
+.opacity-40{
+  opacity: 0.4;
+}
+
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1039,6 +1138,21 @@ body,
 ::selection {
   color: #010026;
   background: #fdcc49;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* ******************* */
@@ -1285,28 +1399,36 @@ body,
   cursor: pointer;
 }
 
-/* .skills-header::before {
-  content: "";
-  width: 50%;
-  height: 2%;
-  background: yellow;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-} */
+/* ****************** */
 
-/* .skills-header::after {
+/* Project */
+
+/* ****************** */
+
+@keyframes rador {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.active-project::before {
   content: "";
-  width: 50%;
+  width: 100%;
   height: 100%;
-  border-bottom: 2px solid #fdcc49;
-  border-right: 2px solid #fdcc49;
-  border-radius: 10px;
+  border-radius: 100%;
+  background: inherit;
   position: absolute;
-  bottom: 0;
-  right: 0;
-} */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%); */
+  animation: rador 1s linear infinite;
+}
 
 .selection\:bg-yellow *::-moz-selection{
   --tw-bg-opacity: 1;
@@ -1478,10 +1600,6 @@ body,
 
   .md\:justify-between{
     justify-content: space-between;
-  }
-
-  .md\:text-left{
-    text-align: left;
   }
 
   .md\:text-justify{
