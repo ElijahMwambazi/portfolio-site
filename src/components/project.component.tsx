@@ -1,14 +1,16 @@
+import { useState } from "react";
 import Button from "./button.component";
 import { ReactComponent as GitHubIcon } from "../assets/socials/github.svg";
-import { finished } from "stream";
 
 export type ProjectProps = {
   imgSrc: string;
   projectName: string;
   description: string;
+  techStack: string[];
   isActive: boolean;
   projectState: "DONE" | "ACTIVE" | "TODO";
-  href: string;
+  projectHref: string;
+  githubHref: string;
   startDate: Date | "TBD";
   finishDate: Date | "TBD";
 };
@@ -17,12 +19,25 @@ const Project = ({
   imgSrc,
   projectName,
   description,
+  techStack,
   isActive,
   projectState,
-  href,
+  projectHref,
+  githubHref,
   startDate,
   finishDate,
 }: ProjectProps) => {
+  const [isCardHovered, setIscardHovered] =
+    useState(false);
+  const [isToggleHovered, setIsToggleHovered] =
+    useState(false);
+  const [isViewToggled, setIsViewToggled] =
+    useState(false);
+
+  const toggleView = () => {
+    setIsViewToggled(!isViewToggled);
+  };
+
   return (
     <div
       className="relative overflow-hidden flex flex-col items-center justify-center rounded p-14 border-2 shadow-xl"
@@ -36,7 +51,42 @@ const Project = ({
             ? "#757575"
             : "inherit",
       }}
+      onMouseEnter={() => setIscardHovered(true)}
+      onMouseLeave={() => {
+        setIscardHovered(false);
+        setIsViewToggled(true);
+      }}
     >
+      <div
+        className="absolute top-2 left-2 p-2 text-sm bg-yellow rounded cursor-pointer"
+        style={{
+          background:
+            projectState === "DONE"
+              ? isToggleHovered
+                ? "rgba(21, 255, 0, 0.7)"
+                : "rgba(21, 255, 0, 0.4)"
+              : projectState === "ACTIVE"
+              ? isToggleHovered
+                ? "rgb(253, 204, 73, 0.7)"
+                : "rgba(253, 205, 73, 0.4)"
+              : projectState === "TODO"
+              ? isToggleHovered
+                ? "rgb(117, 117, 117, 0.7)"
+                : "rgba(117, 117, 117, 0.4)"
+              : "inherit",
+        }}
+        onClick={() => toggleView()}
+        onMouseEnter={() =>
+          setIsToggleHovered(true)
+        }
+        onMouseLeave={() =>
+          setIsToggleHovered(false)
+        }
+      >
+        <p>
+          {isViewToggled ? "More Info" : "Back"}
+        </p>
+      </div>
       <div className="absolute top-3 right-6 flex gap-2 items-center justify-center">
         <p
           style={{
@@ -72,9 +122,14 @@ const Project = ({
       </div>
       <img
         src={imgSrc}
-        className="w-full h-full absolute top-0 left-0 z-[-1] opacity-20 object-fill"
+        className="w-full h-full absolute top-0 left-0 z-[-1] object-fill"
+        style={{
+          opacity: isCardHovered ? 0.5 : 1,
+          transition: "all 0.2s linea",
+        }}
       />
-      <div className="">
+
+      <div className="w-full">
         <h3
           className="font-josefinSans capitalize text-center font-bold rounded mb-8"
           style={{
@@ -86,32 +141,56 @@ const Project = ({
                 : projectState === "TODO"
                 ? "rgba(117, 117, 117, 0.7)"
                 : "inherit",
+            transform: isCardHovered
+              ? "scale(1)"
+              : "scale(0)",
+            opacity: isCardHovered ? 1 : 0,
+            transition: "all 0.4s linear",
           }}
         >
-          {projectName}
+          {isViewToggled
+            ? projectName
+            : "Tech Stack"}
         </h3>
         <div
           className="flex flex-col items-center justify-center h-40 overflow-scroll scrollbar-hide mb-12 rounded p-2"
           style={{
             background:
               projectState === "DONE"
-                ? "rgba(21, 255, 0, 0.3)"
+                ? "rgba(21, 255, 0, 0.4)"
                 : projectState === "ACTIVE"
-                ? "rgba(253, 205, 73, 0.3)"
+                ? "rgb(253, 205, 73, 0.4)"
                 : projectState === "TODO"
-                ? "rgba(117, 117, 117, 0.3)"
+                ? "rgb(117, 117, 117, 0.4)"
                 : "inherit",
+            transform: isCardHovered
+              ? "scale(1)"
+              : "scale(0)",
+            opacity: isCardHovered ? 1 : 0,
+            transition: "all 0.4s linear",
           }}
         >
-          <p className="text-center">
-            {description}
-          </p>
+          {isViewToggled ? (
+            <p className="text-center">
+              {description}
+            </p>
+          ) : (
+            <ul className="w-full text-center">
+              {techStack.map(
+                (technology, index) => (
+                  <li key={index}>
+                    {technology}
+                  </li>
+                )
+              )}
+            </ul>
+          )}
         </div>
       </div>
       <div className="flex gap-4">
         {isActive && (
           <Button
-            href={href}
+            href={projectHref}
             toDisplay={`View ${
               (projectState === "DONE" &&
                 "Project") ||
@@ -123,7 +202,7 @@ const Project = ({
           />
         )}
         <Button
-          href={href}
+          href={githubHref}
           toDisplay={
             <GitHubIcon className="w-4 h-4" />
           }
