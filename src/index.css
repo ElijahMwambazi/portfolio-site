@@ -257,7 +257,7 @@ body,
 /* ****************** */
 /* Project */
 /* ****************** */
-@keyframes rador {
+@keyframes pulse {
   0% {
     transform: scale(0);
     opacity: 1;
@@ -275,8 +275,5 @@ body,
   border-radius: 100%;
   background: inherit;
   position: absolute;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%); */
-  animation: rador 1s linear infinite;
+  animation: pulse 1s linear infinite;
 }
