@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.29.3",
+    "@tanstack/react-query-devtools": "^4.29.3",
     "@types/lodash": "^4.14.191",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
     "framer-motion": "^10.0.2",
