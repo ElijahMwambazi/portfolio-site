@@ -20,6 +20,7 @@ import Particles from "./scenes/particles.scene";
 import Projects from "./scenes/projects.scene";
 import Blog from "./scenes/blog.scene";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Footer from "./scenes/footer.scene";
 
 declare global {
   interface Window {
@@ -131,6 +132,9 @@ function App() {
               <Particles />
               <div className="relative w-5/6 mx-auto md:h-full">
                 <Blog />
+              </div>
+              <div className="relative w-5/6 mx-auto md:h-full">
+                <Footer />
               </div>
             </Fragment>
           ) : (
