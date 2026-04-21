@@ -7,8 +7,9 @@ const interests = [
   "Privacy",
   "Open Source",
   "Philosophy",
-  "History",
-  "Machine Learning",
+  "Literature",
+  "Economics",
+  "Data Science and Machine Learning",
   "Deep Learning",
   "AI",
   "Gardening",
@@ -32,7 +33,7 @@ export function AboutSection() {
         <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr]">
           <div>
             <SectionHeading title="About" />
-            <div className="max-w-3xl space-y-5 text-neutral-300">
+            <div className="max-w-3xl space-y-6 leading-8 text-neutral-300">
               <p>
                 I’m interested in building useful, everyday tools and in
                 understanding how things work beneath the surface.
@@ -59,7 +60,7 @@ export function AboutSection() {
                 {focus.map((item) => (
                   <span
                     key={item}
-                    className="rounded-md border border-white/10 px-3 py-1.5 text-sm text-neutral-200"
+                    className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-sm text-neutral-400"
                   >
                     {item}
                   </span>

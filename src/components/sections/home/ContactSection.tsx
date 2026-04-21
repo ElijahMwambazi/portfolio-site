@@ -14,7 +14,7 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="space-y-3 text-neutral-300">
+          <div className="max-w-2xl leading-8 text-neutral-400">
             <p>
               GitHub:{" "}
               <a
