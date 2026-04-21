@@ -1,4 +1,5 @@
 import type { Project } from "../types/project";
+import lagRatLogo from "../assets/projects/lag-rat-logo.png";
 
 export const projects: Project[] = [
   {
@@ -10,5 +11,6 @@ export const projects: Project[] = [
     stack: ["Rust", "React", "TypeScript", "SQLite"],
     featured: true,
     githubUrl: "https://github.com/ElijahMwambazi/lag-rat",
+    logo: lagRatLogo,
   },
 ];

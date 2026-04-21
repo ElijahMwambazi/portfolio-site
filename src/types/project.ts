@@ -7,4 +7,5 @@ export type Project = {
   featured?: boolean;
   githubUrl?: string;
   liveUrl?: string;
+  logo?: string;
 };
