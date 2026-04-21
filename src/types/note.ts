@@ -1,3 +1,8 @@
+export type NoteSection = {
+  title: string;
+  body: string;
+};
+
 export type Note = {
   slug: string;
   title: string;
@@ -5,4 +10,8 @@ export type Note = {
   body: string;
   tags: string[];
   date: string;
+  featured?: boolean;
+  category?: string;
+  readTime?: string;
+  sections?: NoteSection[];
 };
