@@ -13,10 +13,10 @@ function GitHubIcon() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-0 pb-10 sm:pb-12">
-      <div className="mx-auto w-full max-w-4xl px-6 sm:px-6">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-sm sm:px-6 sm:py-5">
-          <div className="flex flex-col gap-5 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="mt-0 pb-8 sm:pb-10">
+      <div className="mx-auto w-full max-w-4xl px-5 sm:px-6">
+        <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-4 backdrop-blur-sm sm:px-6 sm:py-5">
+          <div className="flex flex-col gap-4 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-1">
               <p className="font-medium uppercase tracking-[0.14em] text-neutral-300">
                 Elijah Mwambazi
@@ -31,7 +31,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-neutral-400 transition hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-neutral-400 transition hover:border-white/20 hover:bg-white/6 hover:text-white"
             >
               <GitHubIcon />
             </a>

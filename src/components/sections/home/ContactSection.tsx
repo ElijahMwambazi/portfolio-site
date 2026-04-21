@@ -1,7 +1,7 @@
 import { Container } from "../../ui/Container";
 import { SectionHeading } from "../../ui/SectionHeading";
 
-const whatsappHref = "https://wa.me/260XXXXXXXXX";
+const whatsappHref = "https://wa.me/260XXXXXXXXX4";
 const email = "your-email@example.com";
 const twitterHref = "https://x.com/yourhandle";
 const formAction = "https://formspree.io/f/YOUR_FORM_ID";
@@ -94,12 +94,15 @@ function SocialButton({ href, label, icon }: SocialButtonProps) {
 
 export function ContactSection() {
   return (
-    <section id="contact" className="pt-20 pb-14 sm:pt-24 sm:pb-16">
+    <section
+      id="contact"
+      className="pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16"
+    >
       <Container>
-        <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
           <div>
             <SectionHeading title="Reach out" />
-            <p className="max-w-3xl leading-8 text-neutral-400">
+            <p className="max-w-3xl text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
               Have something you want to build, discuss, or ask about? Reach out
               around software, Bitcoin and Lightning, privacy, open source, and
               useful tools.
@@ -123,7 +126,7 @@ export function ContactSection() {
               ))}
             </div>
 
-            <div className="mt-8 flex max-w-3xl items-center gap-3">
+            <div className="mt-8 flex max-w-3xl flex-wrap items-center gap-3">
               <SocialButton
                 href={twitterHref}
                 label="Twitter / X"
@@ -141,6 +144,7 @@ export function ContactSection() {
               />
             </div>
           </div>
+
           <div className="w-full rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_20px_60px_rgba(0,0,0,0.35)] sm:p-5">
             <form action={formAction} method="POST" className="space-y-4">
               <div className="grid gap-4">
