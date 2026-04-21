@@ -3,30 +3,40 @@ import { SectionHeading } from "../../ui/SectionHeading";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="border-t border-white/10 py-20">
       <Container>
-        <SectionHeading title="Contact" />
-        <div className="space-y-3 text-neutral-300">
-          <p>
-            GitHub:{" "}
-            <a
-              className="underline hover:text-white"
-              href="https://github.com/ElijahMwambazi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              github.com/ElijahMwambazi
-            </a>
-          </p>
-          <p>
-            Email:{" "}
-            <a
-              className="underline hover:text-white"
-              href="mailto:.elijajmwambaxi@gmail.com"
-            >
-              you@example.com
-            </a>
-          </p>
+        <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <SectionHeading title="Contact" />
+            <p className="max-w-2xl text-neutral-300">
+              Open to thoughtful conversations around software, open source,
+              Bitcoin and Lightning, privacy, and useful tools.
+            </p>
+          </div>
+
+          <div className="space-y-3 text-neutral-300">
+            <p>
+              GitHub:{" "}
+              <a
+                className="text-neutral-100 underline underline-offset-4 hover:text-white"
+                href="https://github.com/ElijahMwambazi"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ElijahMwambazi
+              </a>
+            </p>
+
+            <p>
+              Email:{" "}
+              <a
+                className="text-neutral-100 underline underline-offset-4 hover:text-white"
+                href="mailto:elijahmwambazi@gmail.com"
+              >
+                elijahmwambazi@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
       </Container>
     </section>
