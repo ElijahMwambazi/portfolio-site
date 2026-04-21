@@ -1,3 +1,13 @@
+export type ProjectSection = {
+  title: string;
+  body: string;
+};
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -8,4 +18,10 @@ export type Project = {
   githubUrl?: string;
   liveUrl?: string;
   logo?: string;
+  status?: string;
+  type?: string;
+  focus?: string;
+  year?: string;
+  overview?: ProjectSection[];
+  links?: ProjectLink[];
 };
