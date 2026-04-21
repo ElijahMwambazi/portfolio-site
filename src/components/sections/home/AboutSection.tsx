@@ -10,7 +10,6 @@ const interests = [
   "Literature",
   "Economics",
   "Data Science and Machine Learning",
-  "Deep Learning",
   "AI",
   "Gardening",
 ];
@@ -28,9 +27,9 @@ const focus = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="border-t border-white/10 py-20">
+    <section id="about" className="py-20 sm:py-24">
       <Container>
-        <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <SectionHeading title="About" />
             <div className="max-w-3xl space-y-6 leading-8 text-neutral-300">
@@ -60,7 +59,7 @@ export function AboutSection() {
                 {focus.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-sm text-neutral-400"
+                    className="rounded-full border border-white/10 bg-white/2 px-3 py-1.5 text-sm text-neutral-400"
                   >
                     {item}
                   </span>
