@@ -33,6 +33,12 @@ function CloseIcon() {
   );
 }
 
+function navLinkClassName({ isActive }: { isActive: boolean }) {
+  return isActive
+    ? "rounded-full border border-white/10 bg-white/[0.08] px-3 py-1.5 text-white"
+    : "rounded-full px-3 py-1.5 text-neutral-300 transition hover:bg-white/[0.04] hover:text-white";
+}
+
 export function SiteHeader() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
@@ -53,13 +59,13 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-neutral-300 md:flex">
-          <NavLink to="/" className="transition hover:text-white">
+          <NavLink to="/" className={navLinkClassName}>
             Home
           </NavLink>
-          <NavLink to="/work" className="transition hover:text-white">
+          <NavLink to="/work" className={navLinkClassName}>
             Work
           </NavLink>
-          <NavLink to="/notes" className="transition hover:text-white">
+          <NavLink to="/notes" className={navLinkClassName}>
             Notes
           </NavLink>
           <a href={contactHref} className="transition hover:text-white">
@@ -84,7 +90,11 @@ export function SiteHeader() {
             <NavLink
               to="/"
               onClick={closeMenu}
-              className="rounded-lg px-3 py-3 transition hover:bg-white/4 hover:text-white"
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-lg bg-white/8 px-3 py-3 text-white"
+                  : "rounded-lg px-3 py-3 text-neutral-300 transition hover:bg-white/4 hover:text-white"
+              }
             >
               Home
             </NavLink>
