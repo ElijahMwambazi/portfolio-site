@@ -7,21 +7,21 @@ export function NotesPage() {
   const otherNotes = notes.filter((note) => !note.featured);
 
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-175 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_40%)] sm:h-212.5" />
+    <section className="relative overflow-hidden py-12 sm:py-16 lg:py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-130 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)] sm:h-175 lg:h-212.5" />
 
       <Container>
         <div className="relative z-10">
           <div className="max-w-3xl">
-            <p className="mb-4 text-xs uppercase tracking-[0.16em] text-neutral-400 sm:text-sm">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.16em] text-neutral-400 sm:mb-4 sm:text-sm">
               Notes
             </p>
 
-            <h1 className="text-3xl font-semibold tracking-tight text-neutral-50 sm:text-5xl lg:text-6xl lg:leading-[1.05]">
+            <h1 className="text-2xl font-semibold tracking-tight text-neutral-50 leading-[1.08] sm:text-4xl lg:text-6xl lg:leading-[1.05]">
               Notes, ideas, and things I’m learning.
             </h1>
 
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-300 sm:text-base sm:leading-8 lg:text-lg">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-300 sm:mt-5 sm:text-base sm:leading-8 lg:text-lg">
               A place for technical notes, reflections, and ideas around
               software, Bitcoin and Lightning, privacy, Linux, and other things
               I keep returning to.
@@ -29,8 +29,8 @@ export function NotesPage() {
           </div>
 
           {featuredNotes.length > 0 ? (
-            <div className="mt-12 sm:mt-14">
-              <div className="mb-6 flex items-center justify-between gap-4">
+            <div className="mt-10 sm:mt-12 lg:mt-14">
+              <div className="mb-5 flex flex-col gap-2 sm:mb-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                 <h2 className="text-lg font-medium text-neutral-100 sm:text-xl">
                   Featured
                 </h2>
@@ -40,11 +40,11 @@ export function NotesPage() {
                 </p>
               </div>
 
-              <div className="grid gap-6 lg:grid-cols-2">
+              <div className="grid gap-5 sm:gap-6 lg:grid-cols-2">
                 {featuredNotes.map((note) => (
                   <article
                     key={note.slug}
-                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_rgba(0,0,0,0.32)] sm:p-6"
+                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5 lg:p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_rgba(0,0,0,0.32)]"
                   >
                     <div className="pointer-events-none absolute inset-0">
                       <div className="absolute -top-16 left-8 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl transition-all duration-300 group-hover:bg-sky-400/15" />
@@ -52,9 +52,9 @@ export function NotesPage() {
                     </div>
 
                     <div className="relative z-10">
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0">
-                          <h3 className="text-xl font-semibold tracking-tight text-neutral-100 sm:text-2xl">
+                          <h3 className="text-lg font-semibold tracking-tight text-neutral-100 sm:text-xl lg:text-2xl">
                             {note.title}
                           </h3>
                           <p className="mt-2 text-sm leading-7 text-neutral-400 sm:text-base">
@@ -67,7 +67,7 @@ export function NotesPage() {
                         </span>
                       </div>
 
-                      <p className="mt-6 text-sm leading-7 text-neutral-300 sm:text-base sm:leading-8">
+                      <p className="mt-5 text-sm leading-7 text-neutral-300 sm:mt-6 sm:text-base sm:leading-8">
                         {note.body.length > 220
                           ? `${note.body.slice(0, 220)}...`
                           : note.body}
@@ -84,12 +84,12 @@ export function NotesPage() {
                         ))}
                       </div>
 
-                      <div className="mt-8 flex items-center justify-between gap-4">
+                      <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                         <p className="text-sm text-neutral-500">{note.date}</p>
 
                         <Link
                           to={`/notes/${note.slug}`}
-                          className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 text-black!"
+                          className="inline-flex w-full items-center justify-center rounded-xl border border-white/15 bg-white px-4 py-2.5 text-sm font-semibold text-black! transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 sm:w-auto"
                         >
                           Read note
                         </Link>
@@ -102,8 +102,8 @@ export function NotesPage() {
           ) : null}
 
           {otherNotes.length > 0 ? (
-            <div className="mt-14 sm:mt-16">
-              <div className="mb-6 flex items-center justify-between gap-4">
+            <div className="mt-12 sm:mt-14 lg:mt-16">
+              <div className="mb-5 flex flex-col gap-2 sm:mb-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                 <h2 className="text-lg font-medium text-neutral-100 sm:text-xl">
                   More notes
                 </h2>
@@ -113,11 +113,11 @@ export function NotesPage() {
                 </p>
               </div>
 
-              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {otherNotes.map((note) => (
                   <article
                     key={note.slug}
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 p-5 backdrop-blur-lg transition-all duration-300 hover:border-white/20 hover:bg-white/6 hover:shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 p-4 sm:p-5 backdrop-blur-lg transition-all duration-300 hover:border-white/20 hover:bg-white/6 hover:shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
                   >
                     <div className="pointer-events-none absolute inset-0">
                       <div className="absolute -right-10 top-0 h-24 w-24 rounded-full bg-white/5 blur-2xl" />
@@ -161,7 +161,7 @@ export function NotesPage() {
           ) : null}
 
           {notes.length === 0 ? (
-            <div className="mt-12 rounded-3xl border border-white/10 bg-white/3 p-6 sm:p-8">
+            <div className="mt-10 rounded-3xl border border-white/10 bg-white/3 p-5 sm:mt-12 sm:p-6 lg:p-8">
               <h2 className="text-xl font-semibold text-neutral-100">
                 No notes yet
               </h2>

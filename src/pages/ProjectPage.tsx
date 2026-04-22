@@ -95,23 +95,23 @@ export function ProjectPage() {
         ];
 
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-212.5 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]" />
+    <section className="relative overflow-hidden py-12 sm:py-16 lg:py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-130 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)] sm:h-175 lg:h-212.5" />
 
       <Container>
         <div className="relative z-10">
           <Link
             to="/work"
-            className="mb-8 inline-flex text-sm text-neutral-400 transition hover:text-white"
+            className="mb-6 inline-flex text-sm text-neutral-400 transition hover:text-white sm:mb-8"
           >
             ← Back to work
           </Link>
 
-          <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+          <div className="grid items-start gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 {project.logo ? (
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/4 p-2 backdrop-blur-md">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/4 p-2 backdrop-blur-md sm:h-16 sm:w-16 sm:rounded-2xl">
                     <img
                       src={project.logo}
                       alt={`${project.title} logo`}
@@ -121,25 +121,25 @@ export function ProjectPage() {
                 ) : null}
 
                 <div className="min-w-0">
-                  <p className="mb-3 text-xs uppercase tracking-[0.16em] text-neutral-400 sm:text-sm">
+                  <p className="mb-2 text-[11px] uppercase tracking-[0.16em] text-neutral-400 sm:mb-3 sm:text-sm">
                     {project.year ? `Project · ${project.year}` : "Project"}
                   </p>
 
-                  <h1 className="text-3xl font-semibold tracking-tight text-neutral-50 sm:text-5xl lg:text-6xl lg:leading-[1.05]">
+                  <h1 className="text-2xl font-semibold tracking-tight text-neutral-50 leading-[1.08] sm:text-4xl lg:text-6xl lg:leading-[1.05]">
                     {project.title}
                   </h1>
 
-                  <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-300 sm:text-base sm:leading-8 lg:text-lg">
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-300 sm:mt-5 sm:text-base sm:leading-8 lg:text-lg">
                     {project.summary}
                   </p>
                 </div>
               </div>
 
-              <p className="mt-8 max-w-3xl text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
+              <p className="mt-6 max-w-3xl text-sm leading-7 text-neutral-400 sm:mt-8 sm:text-base sm:leading-8">
                 {project.description}
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
                 {project.stack.map((item) => (
                   <span
                     key={item}
@@ -150,7 +150,7 @@ export function ProjectPage() {
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4">
                 {hasGitHub ? (
                   <a
                     href={project.githubUrl}
@@ -195,7 +195,7 @@ export function ProjectPage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl sm:p-5 lg:p-6">
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute -top-16 left-8 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl" />
                 <div className="absolute bottom-0 right-0 h-32 w-32 rounded-full bg-violet-400/10 blur-3xl" />
@@ -220,11 +220,11 @@ export function ProjectPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-2">
             {contentSections.map((section) => (
               <div
                 key={section.title}
-                className="rounded-3xl border border-white/10 bg-white/3 p-5 sm:p-6"
+                className="rounded-3xl border border-white/10 bg-white/3 p-4 sm:p-5 lg:p-6"
               >
                 <p className="mb-4 text-xs uppercase tracking-[0.16em] text-neutral-500">
                   {section.title}
