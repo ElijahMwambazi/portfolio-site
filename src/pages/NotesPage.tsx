@@ -11,7 +11,7 @@ export function NotesPage() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-130 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)] sm:h-175 lg:h-212.5" />
 
       <Container>
-        <div className="relative z-10">
+        <div className="relative z-10 flex h-full flex-col">
           <div className="max-w-3xl">
             <p className="mb-3 text-[11px] uppercase tracking-[0.16em] text-neutral-400 sm:mb-4 sm:text-sm">
               Notes
@@ -40,24 +40,24 @@ export function NotesPage() {
                 </p>
               </div>
 
-              <div className="grid gap-5 sm:gap-6 lg:grid-cols-2">
+              <div className="grid items-start gap-5 sm:gap-6 lg:grid-cols-2">
                 {featuredNotes.map((note) => (
                   <article
                     key={note.slug}
-                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5 lg:p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_rgba(0,0,0,0.32)]"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5 lg:p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_rgba(0,0,0,0.32)]"
                   >
                     <div className="pointer-events-none absolute inset-0">
                       <div className="absolute -top-16 left-8 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl transition-all duration-300 group-hover:bg-sky-400/15" />
                       <div className="absolute bottom-0 right-0 h-32 w-32 rounded-full bg-violet-400/10 blur-3xl transition-all duration-300 group-hover:bg-violet-400/15" />
                     </div>
 
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex h-full flex-col">
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0">
                           <h3 className="text-lg font-semibold tracking-tight text-neutral-100 sm:text-xl lg:text-2xl">
                             {note.title}
                           </h3>
-                          <p className="mt-2 text-sm leading-7 text-neutral-400 sm:text-base">
+                          <p className="mt-2 line-clamp-2 text-sm leading-7 text-neutral-400 sm:text-base">
                             {note.summary}
                           </p>
                         </div>
@@ -67,7 +67,7 @@ export function NotesPage() {
                         </span>
                       </div>
 
-                      <p className="mt-5 text-sm leading-7 text-neutral-300 sm:mt-6 sm:text-base sm:leading-8">
+                      <p className="mt-5 line-clamp-4 text-sm leading-7 text-neutral-300 sm:mt-6 sm:text-base sm:leading-8">
                         {note.body.length > 220
                           ? `${note.body.slice(0, 220)}...`
                           : note.body}
@@ -84,7 +84,7 @@ export function NotesPage() {
                         ))}
                       </div>
 
-                      <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                      <div className="mt-auto pt-6 flex flex-col gap-3 sm:pt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                         <p className="text-sm text-neutral-500">{note.date}</p>
 
                         <Link
@@ -123,7 +123,7 @@ export function NotesPage() {
                       <div className="absolute -right-10 top-0 h-24 w-24 rounded-full bg-white/5 blur-2xl" />
                     </div>
 
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex h-full flex-col">
                       <h3 className="text-lg font-semibold text-neutral-100">
                         {note.title}
                       </h3>
