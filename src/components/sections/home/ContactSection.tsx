@@ -1,10 +1,8 @@
 import { Container } from "../../ui/Container";
 import { SectionHeading } from "../../ui/SectionHeading";
+import { siteConfig } from "../../../content/site";
 
-const whatsappHref = "https://wa.me/260XXXXXXXXX4";
-const email = "your-email@example.com";
-const twitterHref = "https://x.com/yourhandle";
-const formAction = "https://formspree.io/f/YOUR_FORM_ID";
+const { whatsappHref, email, twitterHref } = siteConfig;
 
 function CheckIcon() {
   return (
@@ -85,7 +83,7 @@ function SocialButton({ href, label, icon }: SocialButtonProps) {
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-neutral-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/6 hover:text-white"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-neutral-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
     >
       {icon}
     </a>
@@ -93,6 +91,16 @@ function SocialButton({ href, label, icon }: SocialButtonProps) {
 }
 
 export function ContactSection() {
+  const focusItems = [
+    "Practical tooling",
+    "Bitcoin and Lightning",
+    "Privacy",
+    "Open source",
+    "Rust",
+    "TypeScript",
+    "Linux",
+  ];
+
   return (
     <section
       id="contact"
@@ -103,9 +111,8 @@ export function ContactSection() {
           <div>
             <SectionHeading title="Reach out" />
             <p className="max-w-3xl text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
-              Have something you want to build, discuss, or ask about? Reach out
-              around software, Bitcoin and Lightning, privacy, open source, and
-              useful tools.
+              Open to thoughtful conversations around software, open source,
+              Bitcoin and Lightning, privacy, and useful tools.
             </p>
 
             <div className="mt-8 max-w-3xl space-y-4">
@@ -118,7 +125,7 @@ export function ContactSection() {
                   key={item}
                   className="flex items-center gap-3 text-sm text-neutral-400"
                 >
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-white/3 text-neutral-200">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-neutral-200">
                     <CheckIcon />
                   </span>
                   <span>{item}</span>
@@ -146,49 +153,35 @@ export function ContactSection() {
           </div>
 
           <div className="w-full rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_20px_60px_rgba(0,0,0,0.35)] sm:p-5">
-            <form action={formAction} method="POST" className="space-y-4">
-              <div className="grid gap-4">
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm text-neutral-100 outline-none transition placeholder:text-neutral-500 focus:border-white/20"
-                  placeholder="Name"
-                />
-
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm text-neutral-100 outline-none transition placeholder:text-neutral-500 focus:border-white/20"
-                  placeholder="Email"
-                />
+            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl sm:p-6">
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute -top-16 left-8 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl" />
+                <div className="absolute bottom-0 right-0 h-32 w-32 rounded-full bg-violet-400/10 blur-3xl" />
               </div>
 
-              <textarea
-                id="message"
-                name="message"
-                rows={8}
-                required
-                className="w-full resize-none rounded-3xl border border-white/10 bg-black/20 px-4 py-4 text-sm text-neutral-100 outline-none transition placeholder:text-neutral-500 focus:border-white/20"
-                placeholder="Message"
-              />
+              <div className="relative z-10">
+                <p className="mb-4 text-xs uppercase tracking-[0.16em] text-neutral-500">
+                  Current focus
+                </p>
 
-              <input
-                type="hidden"
-                name="_subject"
-                value="New portfolio contact message"
-              />
+                <div className="flex flex-wrap gap-2">
+                  {focusItems.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs text-neutral-200 backdrop-blur-md sm:text-sm"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white px-5 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 hover:shadow-[0_0_24px_rgba(255,255,255,0.16)] active:translate-y-0 active:scale-[0.99]"
-              >
-                Submit
-              </button>
-            </form>
+                <p className="mt-6 text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
+                  Right now I’m mainly focused on building practical tools,
+                  getting sharper with Rust and TypeScript, and continuing to
+                  work around Bitcoin, Lightning, privacy, and open source.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
