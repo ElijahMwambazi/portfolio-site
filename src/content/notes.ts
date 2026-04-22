@@ -42,6 +42,36 @@ export const notes: Note[] = [
     ],
   },
   {
+    slug: "why-i-use-polar-for-bitcoin-and-lightning-prototyping",
+    title: "Why I use Polar for Bitcoin and Lightning prototyping",
+    summary:
+      "A short note on how Polar helped me build practical intuition around Bitcoin Core, Lightning, regtest, and local Bitcoin application development.",
+    body: "Polar has been one of the most useful tools for making Bitcoin and Lightning feel more concrete to me. Instead of only reading about nodes, channels, invoices, and payments, it gave me a local environment where I could actually work with them and see how the pieces fit together.",
+    tags: ["bitcoin", "lightning", "polar", "regtest", "tooling"],
+    date: "2026-04-22",
+    featured: true,
+    category: "Bitcoin",
+    readTime: "3 min read",
+    sections: [
+      {
+        title: "Why it helped",
+        body: "Polar made it easier for me to move from theory into practice. It gave me a controlled environment for experimenting with Bitcoin Core and Lightning nodes locally, without worrying about real funds or relying on external infrastructure. That made it much easier to build intuition around how the system behaves.",
+      },
+      {
+        title: "What I used it for",
+        body: "I have used Polar to get more familiar with Bitcoin Core, the Lightning Network, and the process of prototyping Bitcoin applications around them. Working in regtest made it possible to create local nodes, connect them, fund them, and test flows in a way that felt immediate and practical.",
+      },
+      {
+        title: "Why regtest matters",
+        body: "Regtest is useful because it turns Bitcoin and Lightning into something you can actively work with instead of only study from a distance. It creates a space for experimentation, mistakes, and iteration. For prototyping, that matters a lot because it shortens the gap between an idea and something testable.",
+      },
+      {
+        title: "What I keep taking from it",
+        body: "What I like most about Polar is that it helps make Bitcoin development feel tangible. It gives structure to experimentation and makes the network easier to reason about. For me, it has been a useful bridge between learning Bitcoin conceptually and starting to think more seriously about building applications around it.",
+      },
+    ],
+  },
+  {
     slug: "notes-on-useful-tools",
     title: "Notes on useful tools",
     summary: "A few thoughts on the kinds of software I’m drawn to.",
