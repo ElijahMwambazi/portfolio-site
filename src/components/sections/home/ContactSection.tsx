@@ -107,7 +107,7 @@ export function ContactSection() {
       className="pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16"
     >
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.5fr_0.5fr] lg:gap-12">
           <div>
             <SectionHeading title="Reach out" />
             <p className="max-w-3xl text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
