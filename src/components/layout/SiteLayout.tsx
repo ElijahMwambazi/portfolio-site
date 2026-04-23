@@ -4,9 +4,9 @@ import { SiteFooter } from "./SiteFooter";
 
 export function SiteLayout() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="flex-col bg-neutral-950 text-neutral-100">
       <SiteHeader />
-      <main>
+      <main className="">
         <Outlet />
       </main>
       <SiteFooter />

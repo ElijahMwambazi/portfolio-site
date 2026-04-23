@@ -104,7 +104,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16"
+      className="scroll-mt-24 pt-16 pb-12 sm:scroll-mt-28 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16"
     >
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[0.5fr_0.5fr] lg:gap-12">

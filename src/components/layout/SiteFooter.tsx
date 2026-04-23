@@ -13,7 +13,7 @@ function GitHubIcon() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-0 pb-8 sm:pb-10">
+    <footer className="pb-8 sm:pb-10">
       <div className="mx-auto w-full max-w-4xl px-5 sm:px-6">
         <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-4 backdrop-blur-sm sm:px-6 sm:py-5">
           <div className="flex flex-col gap-4 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
